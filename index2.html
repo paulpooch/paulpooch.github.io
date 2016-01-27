@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Paul Pucciarelli - Fullstack Engineer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body style="
+min-height: 800px;
+perspective: 400px;
+-webkit-perspective: 1000px;
+-webkit-perspective-origin: 100% -50%;
+">
+
+<div id="leftTop" style="width: 400px; height: 200px; position: absolute; background: rgba(0, 0, 255, 0.1); transform: translateZ(-70px) translateY(-100px) rotateX(90deg) translateY(-100px);"></div>
+
+<div class="flextainer flextainer flexcol" style="height: 100vh;">
+  <div style="height: 200px;"></div>
+  <div class="flex1 flextainer flexcenter flexitemsend">
+
+    <!-- LEFT GUTTER -->
+    <div style="width: 100px;"></div>
+
+    <div class="flex1 flextainer" style="height: calc(100vh - 200px); ">
+
+      <!-- LEFT COL -->
+      <div id="left" class="flex1 flextainer" style="background: rgba(255, 0, 0, 0.1); transform: translateZ(-70px);"></div>
+
+      <!-- RIGHT SIDE OF LEFT COL -->
+      <div style="width: 50px; background: rgba(0, 255, 0, 0.5); transform: translateZ(-70px) translateX(-25px) rotateY(90deg) translateX(25px);"></div>
+
+      <!-- CONTENT AREA ? -->
+      <div class="flex3" style="background: rgba(0, 0, 0, 0.1);">cats</div>
+
+    </div>
+
+    <!-- RIGHT GUTTER -->
+    <div style="width: 100px;"></div>
+
+  </div>
+</div>
+</body>
+<script>
+
+  (function() {
+    var left = null;
+    var leftTop = null;
+    function resize() {
+      left = document.getElementById('left');
+      leftTop = document.getElementById('leftTop');
+      var leftRect = left.getBoundingClientRect();
+      var coords = {
+        top: leftRect.top + document.body.scrollTop,
+        left: leftRect.left + document.body.scrollLeft
+      };
+      leftTop.style.width = left.offsetWidth + 'px';
+      leftTop.style.top = coords.top + 'px';
+      leftTop.style.left = coords.left + 'px';
+    }
+    document.addEventListener("DOMContentLoaded", function() {
+      resize();
+    });
+    window.addEventListener('resize', function(event){
+      resize();
+    });
+  }());
+
+</script>
+</html>
+<!--
+<div style="width: 200px; background: rgba(0, 0, 0, 0.1); transform: translateZ(200px);">
+  <div style="width: 100%; height: 100%; background: rgba(255, 0, 0, 0.1); transform: rotateY(45deg);">a</div>
+</div>
+<div style="width: 600px; background: rgba(0, 0, 0, 0.1); transform: translateZ(150px);">b</div>
+-->
