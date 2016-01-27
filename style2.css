@@ -38,6 +38,14 @@ The second and third parameters (flex-shrink and flex-basis) are optional. Defau
   flex: 4;
   -webkit-flex: 4;
 }
+.flex7 {
+  flex: 7;
+  -webkit-flex: 7;
+}
+.flex15 {
+  flex: 15;
+  -webkit-flex: 15;
+}
 
 /* This establishes the main-axis, thus defining the direction flex items are placed in the flex container.
 Flexbox is (aside from optional wrapping) a single-direction layout concept.
