@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style2.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.1/lodash.min.js" ></script>
 </head>
 <body style="
 min-height: 800px;
@@ -181,10 +182,17 @@ border: 1px solid rgba(0, 0, 0, 0.33);
 
   (function() {
 
+    var BASE_PERSPECTIVE = 1000;
+    var LISTENER_RATE_LIMIT = 50;
+    var ORIGIN_MUTE_FACTOR = 0.75;
+    var ZOOM_MUTE_FACTOR = 0.3;
+
     var left = null;
     var leftTop = null;
     var content = null
     var contentTop = null;
+    var viewportHeight = null;
+    var viewportWidth = null;
 
     function getCoords(el) {
       var rect = el.getBoundingClientRect();
@@ -205,6 +213,8 @@ border: 1px solid rgba(0, 0, 0, 0.33);
       var contentCoords = getCoords(content);
       updateSize(leftTop, leftCoords, left.offsetWidth);
       updateSize(contentTop, contentCoords, content.offsetWidth);
+      viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     }
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -216,9 +226,32 @@ border: 1px solid rgba(0, 0, 0, 0.33);
     });
 
     // TODO debounce onResize listener.
-    window.addEventListener('resize', function(event){
+    window.addEventListener('resize', _.throttle(function(event){
       resize();
-    });
+    }, LISTENER_RATE_LIMIT));
+
+    window.addEventListener('mousemove', _.throttle(function(event){
+
+      var centerX = ~~(viewportWidth / 2);
+      var centerY = ~~(viewportHeight / 2);
+
+      var percentFromCenterX = 100 * ((centerX - event.clientX) / centerX);
+      var percentFromCenterY = 100 * ((centerY - event.clientY) / centerY);
+      var percentX = ORIGIN_MUTE_FACTOR * (100 + percentFromCenterX);
+      var percentY = ORIGIN_MUTE_FACTOR * (100 + percentFromCenterY);
+
+      var distX = centerX - event.clientX;
+      var distY = centerY - event.clientY;
+      var dist = Math.sqrt(distX * distX + distY * distY);
+      var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * dist), 100);
+
+      console.log(percentX, percentY);
+      //document.body.style.webkitPerspective = perspective + 'px';
+      document.body.style.webkitPerspectiveOrigin = (percentX - 10) + '% ' + (percentY - 20) + '% ';
+      //document.body.style.marginTop = (centerY - event.clientY) + 'px';
+      //document.body.style.webkitPerspectiveOrigin = event.clientX + 'px ' + event.clientY + 'px';
+
+    }, LISTENER_RATE_LIMIT));
 
   }());
 
