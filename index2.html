@@ -184,6 +184,7 @@ background-size: cover;
   <div style="height: 50px;"></div>
 
 </div>
+
 <div id="leftTop" style="
 width: 400px;
 height: 200px;
@@ -228,9 +229,9 @@ border: 1px solid rgba(0, 0, 0, 0.33);
     }
 
     function updateSize(el, coords, width) {
-      el.style.width = width + 'px';
-      el.style.top = coords.top + 'px';
-      el.style.left = coords.left + 'px';
+      el.style.width = ~~width + 'px';
+      el.style.top = ~~coords.top + 'px';
+      el.style.left = ~~coords.left + 'px';
     }
 
     function resize() {
@@ -251,7 +252,6 @@ border: 1px solid rgba(0, 0, 0, 0.33);
       resize();
     });
 
-    // TODO debounce onResize listener.
     window.addEventListener('resize', _.throttle(function(event){
       resize();
     }, LISTENER_RATE_LIMIT));
@@ -265,11 +265,14 @@ border: 1px solid rgba(0, 0, 0, 0.33);
       var distPercent = Math.sqrt(distPercentX * distPercentX + distPercentY * distPercentY);
       var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * distPercent), 100);
 
-      document.body.style.webkitPerspective = perspective + 'px';
-      document.body.style.webkitPerspectiveOrigin = inversePercentX + '% ' + inversePercentY + '% ';
-      document.body.style.marginLeft = (MOVE_MUTE_FACTOR * distPercentX) + 'px';
-      document.body.style.marginTop = (MOVE_MUTE_FACTOR * distPercentY) + 'px';
+      document.body.style.webkitPerspective = ~~perspective + 'px';
+      document.body.style.webkitPerspectiveOrigin = ~~inversePercentX + '% ' + ~~inversePercentY + '% ';
+      document.body.style.marginLeft = ~~(MOVE_MUTE_FACTOR * distPercentX) + 'px';
+      document.body.style.marginTop = ~~(MOVE_MUTE_FACTOR * distPercentY) + 'px';
       //console.log(document.body.style.webkitPerspective, document.body.style.webkitPerspectiveOrigin, document.body.style.marginLeft, document.body.style.marginTop);
+
+      // Manually tweak chrome.
+      contentTop.style.width = ~~(content.offsetWidth + (inversePercentX * 0.12)) + 'px';
 
     }, LISTENER_RATE_LIMIT));
 
