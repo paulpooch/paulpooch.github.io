@@ -184,8 +184,8 @@ border: 1px solid rgba(0, 0, 0, 0.33);
 
     var BASE_PERSPECTIVE = 1000;
     var LISTENER_RATE_LIMIT = 10;
-    var MOVE_MUTE_FACTOR = 0.4;
-    var ZOOM_MUTE_FACTOR = 0.2;
+    var MOVE_MUTE_FACTOR = 0.9;
+    var ZOOM_MUTE_FACTOR = 3;
 
     var left = null;
     var leftTop = null;
@@ -232,23 +232,18 @@ border: 1px solid rgba(0, 0, 0, 0.33);
 
     window.addEventListener('mousemove', _.throttle(function(event){
 
-      var centerX = ~~(viewportWidth / 2);
-      var centerY = ~~(viewportHeight / 2);
-
-      var percentFromCenterX = 100 * ((centerX - event.clientX) / centerX);
-      var percentFromCenterY = 100 * ((centerY - event.clientY) / centerY);
-      var percentX = 50 + (percentFromCenterX / 2);
-      var percentY = 50 + (percentFromCenterY / 2);
-
-      var distX = centerX - event.clientX;
-      var distY = centerY - event.clientY;
-      var dist = Math.sqrt(distX * distX + distY * distY);
-      var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * dist), 100);
+      var inversePercentX = 100 * (1 - event.clientX / viewportWidth);
+      var inversePercentY = 100 * (1 - event.clientY / viewportHeight);
+      var distPercentX = 50 - inversePercentX;
+      var distPercentY = 50 - inversePercentY;
+      var distPercent = Math.sqrt(distPercentX * distPercentX + distPercentY * distPercentY);
+      var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * distPercent), 100);
 
       document.body.style.webkitPerspective = perspective + 'px';
-      document.body.style.webkitPerspectiveOrigin = percentX + '% ' + percentY + '% ';
-      document.body.style.marginTop = MOVE_MUTE_FACTOR * (0 - percentFromCenterY) + 'px';
-      document.body.style.marginLeft = MOVE_MUTE_FACTOR * (0 - percentFromCenterX) + 'px';
+      document.body.style.webkitPerspectiveOrigin = inversePercentX + '% ' + inversePercentY + '% ';
+      document.body.style.marginLeft = (MOVE_MUTE_FACTOR * distPercentX) + 'px';
+      document.body.style.marginTop = (MOVE_MUTE_FACTOR * distPercentY) + 'px';
+      console.log(document.body.style.webkitPerspective, document.body.style.webkitPerspectiveOrigin, document.body.style.marginLeft, document.body.style.marginTop);
 
     }, LISTENER_RATE_LIMIT));
 
