@@ -51,7 +51,20 @@ background-size: cover;
     <!-- LEFT GUTTER -->
     <div class="flex1"></div>
 
-    <div class="flex30 flextainer" style="height: calc(100vh - 100px);">
+    <div class="flex30 flextainer" style="
+    height: calc(100vh - 100px);
+    /*margin-left: -200px;
+    margin-right: -160px;*/
+    ">
+
+      <!-- LEFT SIDE OF LEFT COL -->
+      <div style="
+      width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(100px) rotateY(90deg) translateX(100px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
 
       <!-- LEFT COL -->
       <div id="left" class="flex2 flextainer flexcol" style="
@@ -150,6 +163,16 @@ background-size: cover;
         </div>
       </div>
 
+      <!-- RIGHT SIDE OF CONTENT AREA -->
+      <div style="
+      margin-top: 50px;
+      width: 160px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-40px) translateX(-80px) rotateY(90deg) translateX(80px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
+
     </div>
 
     <!-- RIGHT GUTTER -->
@@ -169,14 +192,16 @@ background: rgba(255, 255, 255, 0.3);
 transform: translateY(-100px) rotateX(90deg) translateY(-100px);
 border: 1px solid rgba(0, 0, 0, 0.33);
 "></div>
+
 <div id="contentTop" style="
 width: 400px;
 height: 160px;
 position: absolute;
 background: rgba(255, 255, 255, 0.3);
-transform: translateY(-80px) translateZ(-40px) rotateX(90deg) translateY(-80px);
+transform: translateZ(-120px) translateY(-80px) rotateX(90deg);
 border: 1px solid rgba(0, 0, 0, 0.33);
 "></div>
+
 </body>
 <script>
 
@@ -211,6 +236,7 @@ border: 1px solid rgba(0, 0, 0, 0.33);
     function resize() {
       var leftCoords = getCoords(left);
       var contentCoords = getCoords(content);
+      console.log(contentCoords);
       updateSize(leftTop, leftCoords, left.offsetWidth);
       updateSize(contentTop, contentCoords, content.offsetWidth);
       viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
@@ -243,7 +269,7 @@ border: 1px solid rgba(0, 0, 0, 0.33);
       document.body.style.webkitPerspectiveOrigin = inversePercentX + '% ' + inversePercentY + '% ';
       document.body.style.marginLeft = (MOVE_MUTE_FACTOR * distPercentX) + 'px';
       document.body.style.marginTop = (MOVE_MUTE_FACTOR * distPercentY) + 'px';
-      console.log(document.body.style.webkitPerspective, document.body.style.webkitPerspectiveOrigin, document.body.style.marginLeft, document.body.style.marginTop);
+      //console.log(document.body.style.webkitPerspective, document.body.style.webkitPerspectiveOrigin, document.body.style.marginLeft, document.body.style.marginTop);
 
     }, LISTENER_RATE_LIMIT));
 
