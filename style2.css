@@ -38,14 +38,14 @@ html {
   -webkit-box-shadow: inset 0px 0px 10px 1px rgba(255, 255, 255, 0.33);
   -moz-box-shadow: inset 0px 0px 10px 1px rgba(255, 255, 255, 0.33);
   box-shadow: inset 0px 0px 10px 1px rgba(255, 255, 255, 0.33);
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
   border-right: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 6px;
   font-size: 1.1rem;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 1.0);
 }
 
 /*.navItem {*/

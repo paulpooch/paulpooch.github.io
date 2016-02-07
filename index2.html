@@ -43,20 +43,21 @@ background-size: cover;
 <div class="flextainer flextainer flexcol" style="height: 100vh;">
 
   <!-- TOP BUFFER -->
-  <div style="height: 100px;"></div>
+  <div style="height: 160px;"></div>
 
   <div class="flex1 flextainer flexcenter flexitemsend">
 
     <!-- LEFT GUTTER -->
     <div class="flex1"></div>
 
-    <div class="flex30 flextainer" style="height: calc(100vh - 200px);">
+    <div class="flex30 flextainer" style="height: calc(100vh - 160px);">
 
       <!-- LEFT COL -->
       <div id="left" class="flex2 flextainer flexcol" style="
       background: rgba(255, 255, 255, 0.2);
       color: rgba(255, 255, 255, 1.0);
       border: 1px solid rgba(0, 0, 0, 0.33);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-family: 'OverpassExtraLight', 'sans-serif';
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
       ">
@@ -85,7 +86,7 @@ background-size: cover;
           background-size: contain;
           min-height: 100px;
           text-align: center;
-          -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+          -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.8));
           filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
           ">
           </div>
@@ -94,6 +95,7 @@ background-size: cover;
           font-size: 1.3rem;
           padding: 10px 15px 5px;
           white-space: nowrap;
+          margin-left: -10px;
           ">
             Paul Pucciarelli
           </div>
@@ -129,6 +131,7 @@ background-size: cover;
       background: rgba(255, 255, 255, 0.1);
       transform: translateX(-100px) rotateY(90deg) translateX(100px);
       border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
       "></div>
 
       <!-- CONTENT AREA ? -->
@@ -140,6 +143,7 @@ background-size: cover;
         <div id="content" class="flex1" style="
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.33);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         ">
           
         </div>
@@ -153,7 +157,7 @@ background-size: cover;
   </div>
 
   <!-- BOTTOM BUFFER -->
-  <div style="height: 50px;"></div>
+  <div style="height: 20px;"></div>
 
 </div>
 <div id="leftTop" style="
