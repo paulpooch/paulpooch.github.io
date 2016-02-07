@@ -14,38 +14,133 @@ min-height: 800px;
 perspective: 400px;
 -webkit-perspective: 1000px;
 -webkit-perspective-origin: 75% -50%;
-background: #c6c9cd;
+background: #7b4397; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ">
+
+<!--
+<video autoplay loop poster="loading.jpg" id="bgvid" style="
+position: fixed;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+-ms-transform: translateX(-50%) translateY(-50%);
+-moz-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url(polina.jpg) no-repeat;
+background-size: cover;
+">
+  <source src="http://ak1.picdn.net/shutterstock/videos/4652414/preview/stock-footage-new-york-september-manhattan-skyline-on-beautiful-night-with-empire-state-building-and.mp4" type="video/mp4">
+</video>
+-->
 
 <div class="flextainer flextainer flexcol" style="height: 100vh;">
 
   <!-- TOP BUFFER -->
-  <div style="height: 200px;"></div>
+  <div style="height: 100px;"></div>
 
   <div class="flex1 flextainer flexcenter flexitemsend">
 
     <!-- LEFT GUTTER -->
     <div class="flex1"></div>
 
-    <div class="flex15 flextainer" style="height: calc(100vh - 200px);">
+    <div class="flex30 flextainer" style="height: calc(100vh - 200px);">
 
       <!-- LEFT COL -->
-      <div id="left" class="flex2 flextainer flexcol" style="background: #545e6a; color: #1b2838;">
-        <div>
-          <div style="background: #f35353; padding: 10px 20px; border-radius: 10px; margin: 20px 20px 0; font-size: 3.0rem;">Projects</div>
+      <div id="left" class="flex2 flextainer flexcol" style="
+      background: rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 1.0);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      font-family: 'OverpassExtraLight', 'sans-serif';
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
+      ">
+
+        <div class="flextainer flexcenter flexcol" style="
+        margin: 20px 20px 10px;
+        background: rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+        box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        ">
+          <div
+          class="flex1"
+          style="
+          opacity: 1.0;
+          margin-top: 15px;
+          background: transparent url('pp.png') center no-repeat;
+          -webkit-background-size: contain;
+          -moz-background-size: contain;
+          -o-background-size: contain;
+          background-size: contain;
+          min-height: 100px;
+          text-align: center;
+          -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+          ">
+          </div>
+          <div class="flexselfcenter" style="
+          color: rgba(255, 255, 255, 1.0);
+          font-size: 1.3rem;
+          padding: 10px 15px 5px;
+          white-space: nowrap;
+          ">
+            Paul Pucciarelli
+          </div>
         </div>
-        <div>
-          <div style="background: #f35353; padding: 10px 20px; border-radius: 10px; margin: 20px 20px 0; font-size: 3.0rem;">Resume</div>
+
+        <div class="flextainer flexcenter flexitemcenter" style="
+
+        ">
+
         </div>
+
+        <div class="navItem">
+          PROJECTS
+        </div>
+
+        <div class="navItem">
+          RESUME
+        </div>
+
+        <div class="navItem">
+          GITHUB
+        </div>
+
+        <div class="navItem">
+          LINKEDIN
+        </div>
+
       </div>
 
       <!-- RIGHT SIDE OF LEFT COL -->
-      <div style="width: 200px; background: #1b2838; transform: translateX(-100px) rotateY(90deg) translateX(100px);"></div>
+      <div style="
+      width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-100px) rotateY(90deg) translateX(100px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      "></div>
 
       <!-- CONTENT AREA ? -->
-      <div class="flex7 flextainer flexcol" style="transform: translateZ(-40px); margin-left: -200px;">
+      <div class="flex7 flextainer flexcol" style="
+      transform: translateZ(-40px);
+      margin-left: -200px;
+      ">
         <div style="height: 50px;"></div>
-        <div id="content" class="flex1" style="background: #545e6a;">
+        <div id="content" class="flex1" style="
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.33);
+        ">
           
         </div>
       </div>
@@ -61,8 +156,22 @@ background: #c6c9cd;
   <div style="height: 50px;"></div>
 
 </div>
-<div id="leftTop" style="width: 400px; height: 200px; position: absolute; background: #8d939b; transform: translateY(-100px) rotateX(90deg) translateY(-100px);"></div>
-<div id="contentTop" style="width: 400px; height: 160px; position: absolute; background: #8d939b; transform: translateY(-80px) translateZ(-40px) rotateX(90deg) translateY(-80px);"></div>
+<div id="leftTop" style="
+width: 400px;
+height: 200px;
+position: absolute;
+background: rgba(255, 255, 255, 0.3);
+transform: translateY(-100px) rotateX(90deg) translateY(-100px);
+border: 1px solid rgba(0, 0, 0, 0.33);
+"></div>
+<div id="contentTop" style="
+width: 400px;
+height: 160px;
+position: absolute;
+background: rgba(255, 255, 255, 0.3);
+transform: translateY(-80px) translateZ(-40px) rotateX(90deg) translateY(-80px);
+border: 1px solid rgba(0, 0, 0, 0.33);
+"></div>
 </body>
 <script>
 
