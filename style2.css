@@ -84,6 +84,8 @@ html {
 .navItem:hover, .navItem:focus, .navItem:active {
   color: rgba(0, 0, 0, 1.0);
   /*text-shadow: 1px 1px 1px rgba(255, 255, 255, 1.0);*/
+  text-shadow: none;
+  font-weight: 900;
 }
 .navItem:hover:before, .navItem:focus:before, .navItem:active:before {
   -webkit-transform: scaleX(1);
