@@ -14,7 +14,7 @@
 min-height: 800px;
 perspective: 400px;
 -webkit-perspective: 1000px;
--webkit-perspective-origin: 75% -50%;
+-webkit-perspective-origin: 50% 50%;
 background: #7b4397; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -44,14 +44,14 @@ background-size: cover;
 <div class="flextainer flextainer flexcol" style="height: 100vh;">
 
   <!-- TOP BUFFER -->
-  <div style="height: 160px;"></div>
+  <div style="height: 50px;"></div>
 
   <div class="flex1 flextainer flexcenter flexitemsend">
 
     <!-- LEFT GUTTER -->
     <div class="flex1"></div>
 
-    <div class="flex30 flextainer" style="height: calc(100vh - 160px);">
+    <div class="flex30 flextainer" style="height: calc(100vh - 100px);">
 
       <!-- LEFT COL -->
       <div id="left" class="flex2 flextainer flexcol" style="
@@ -158,7 +158,7 @@ background-size: cover;
   </div>
 
   <!-- BOTTOM BUFFER -->
-  <div style="height: 20px;"></div>
+  <div style="height: 50px;"></div>
 
 </div>
 <div id="leftTop" style="
@@ -183,9 +183,9 @@ border: 1px solid rgba(0, 0, 0, 0.33);
   (function() {
 
     var BASE_PERSPECTIVE = 1000;
-    var LISTENER_RATE_LIMIT = 50;
-    var ORIGIN_MUTE_FACTOR = 0.75;
-    var ZOOM_MUTE_FACTOR = 0.3;
+    var LISTENER_RATE_LIMIT = 10;
+    var MOVE_MUTE_FACTOR = 0.4;
+    var ZOOM_MUTE_FACTOR = 0.2;
 
     var left = null;
     var leftTop = null;
@@ -237,19 +237,18 @@ border: 1px solid rgba(0, 0, 0, 0.33);
 
       var percentFromCenterX = 100 * ((centerX - event.clientX) / centerX);
       var percentFromCenterY = 100 * ((centerY - event.clientY) / centerY);
-      var percentX = ORIGIN_MUTE_FACTOR * (100 + percentFromCenterX);
-      var percentY = ORIGIN_MUTE_FACTOR * (100 + percentFromCenterY);
+      var percentX = 50 + (percentFromCenterX / 2);
+      var percentY = 50 + (percentFromCenterY / 2);
 
       var distX = centerX - event.clientX;
       var distY = centerY - event.clientY;
       var dist = Math.sqrt(distX * distX + distY * distY);
       var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * dist), 100);
 
-      console.log(percentX, percentY);
-      //document.body.style.webkitPerspective = perspective + 'px';
-      document.body.style.webkitPerspectiveOrigin = (percentX - 10) + '% ' + (percentY - 20) + '% ';
-      //document.body.style.marginTop = (centerY - event.clientY) + 'px';
-      //document.body.style.webkitPerspectiveOrigin = event.clientX + 'px ' + event.clientY + 'px';
+      document.body.style.webkitPerspective = perspective + 'px';
+      document.body.style.webkitPerspectiveOrigin = percentX + '% ' + percentY + '% ';
+      document.body.style.marginTop = MOVE_MUTE_FACTOR * (0 - percentFromCenterY) + 'px';
+      document.body.style.marginLeft = MOVE_MUTE_FACTOR * (0 - percentFromCenterX) + 'px';
 
     }, LISTENER_RATE_LIMIT));
 
