@@ -29,6 +29,7 @@
 
 html {
   font-family: 'OverpassExtraLight', 'sans-serif';
+  webkit-font-smoothing: antialiased;
 }
 
 .navItemWrapper {

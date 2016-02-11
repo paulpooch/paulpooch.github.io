@@ -18,6 +18,7 @@ perspective: 400px;
 background: #7b4397; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 ">
 
 <!--
@@ -76,12 +77,12 @@ background: rgba(0, 0, 0, 0.33);"></div>
 
       <!-- LEFT COL -->
       <div id="left" class="flex2 flextainer flexcol" style="
-      background: rgba(255, 255, 255, 0.2);
       color: rgba(255, 255, 255, 1.0);
       border: 1px solid rgba(0, 0, 0, 0.33);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-family: 'OverpassExtraLight', 'sans-serif';
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
+      background: rgba(255, 255, 255, 0.2);
       ">
 
         <div class="flextainer flexcenter flexcol" style="
@@ -101,7 +102,7 @@ background: rgba(0, 0, 0, 0.33);"></div>
           style="
           opacity: 1.0;
           margin-top: 15px;
-          background: transparent url('pp.png') center no-repeat;
+          background: transparent url('pp.png') no-repeat center center / 100% 100%;
           -webkit-background-size: contain;
           -moz-background-size: contain;
           -o-background-size: contain;
@@ -124,13 +125,19 @@ background: rgba(0, 0, 0, 0.33);"></div>
         </div>
 
         <div class="navItemWrapper">
+          <div class="navItem" data-section="home">
+            HOME
+          </div>
+        </div>
+
+        <div class="navItemWrapper">
           <div class="navItem">
             PROJECTS
           </div>
         </div>
 
         <div class="navItemWrapper">
-          <div class="navItem">
+          <div class="navItem" data-section="resume">
             RESUME
           </div>
         </div>
@@ -147,6 +154,16 @@ background: rgba(0, 0, 0, 0.33);"></div>
           </div>
         </div>
 
+        <!--
+        <div style="flex: 1; display: flex;">
+          <div style="
+          flex: 1;
+          opacity: 0.05;
+          background: transparent url('desk.png') no-repeat bottom left / 100% 100%;
+          "></div>
+        </div>
+        -->
+
       </div>
 
       <!-- RIGHT SIDE OF LEFT COL -->
@@ -162,6 +179,7 @@ background: rgba(0, 0, 0, 0.33);"></div>
       <div class="flex7 flextainer flexcol" style="
       transform: translateZ(-40px);
       margin-left: -200px;
+      z-index: 2;
       ">
         <div style="height: 50px;"></div>
         <div id="content" class="flex1" style="
@@ -172,11 +190,40 @@ background: rgba(0, 0, 0, 0.33);"></div>
         ">
 
           <!-- HOME -->
-          <div id="home" style="color: rgba(255, 255, 255, 1.0);">
+          <div id="home" class="section" style="color: rgba(255, 255, 255, 1.0);">
+
+            <div style="display: flex;">
+
+              <div style="
+              background: rgba(0, 0, 0, 0.5) url('pp_profile.png') no-repeat top left / 100% 100%;
+              width: 200px;
+              height: 250px;
+              margin: 20px;
+              border: 1px solid rgba(0, 0, 0, 0.5);
+              box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1.0);
+              "></div>
+
+              <div>
+                <h1>
+                  I'm a full stack engineer with a strength in front end.
+                </h1>
+                <h2>
+                  I've built large scale web apps in many web stacks.<br/>
+                  Currently I work on both Backbone & React/Redux products.
+                </h2>
+                <h2>
+                  I live in NYC and work at Ticket Evolution.
+                </h2>
+              </div>
+            </div>
+
+            <p>
+              I build solid products.
+            </p>
           </div>
 
           <!-- RESUME -->
-          <div id="resume" style="
+          <div id="resume" class="section" style="
           display: none;
           color: rgba(255, 255, 255, 1.0);
           ">
@@ -444,6 +491,18 @@ border: 1px solid rgba(0, 0, 0, 0.33);
       contentTop.style.width = ~~(content.offsetWidth + (inversePercentX * 0.12)) + 'px';
 
     }, LISTENER_RATE_LIMIT));
+
+    document.getElementById('left').addEventListener('click', function(e) {
+      if (e.target.classList.contains('navItem')) {
+        var section = e.target.getAttribute('data-section');
+        if (section) {
+          [].slice.call(document.getElementsByClassName('section')).forEach(function(el) {
+            el.style.display = 'none';
+          });
+          document.getElementById(section).style.display = 'block';
+        }
+      }
+    });
 
   }());
 
