@@ -18,7 +18,7 @@ perspective: 400px;
 background: #7b4397; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 ">
 
 <!--
@@ -81,7 +81,6 @@ background: rgba(0, 0, 0, 0.33);"></div>
       border: 1px solid rgba(0, 0, 0, 0.33);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       font-family: 'OverpassExtraLight', 'sans-serif';
-      text-shadow: 1px 1px 1px rgba(0, 0, 0, 1.0);
       background: rgba(255, 255, 255, 0.2);
       ">
 
@@ -115,7 +114,6 @@ background: rgba(0, 0, 0, 0.33);"></div>
           </div>
           <div class="flexselfcenter" style="
           color: rgba(255, 255, 255, 1.0);
-          font-size: 1.3rem;
           padding: 10px 15px 5px;
           white-space: nowrap;
           margin-left: -10px;
@@ -126,31 +124,31 @@ background: rgba(0, 0, 0, 0.33);"></div>
 
         <div class="navItemWrapper">
           <div class="navItem" data-section="home">
-            HOME
+            Home
           </div>
         </div>
 
         <div class="navItemWrapper">
           <div class="navItem">
-            PROJECTS
+            Projects
           </div>
         </div>
 
         <div class="navItemWrapper">
           <div class="navItem" data-section="resume">
-            RESUME
+            Resume
           </div>
         </div>
 
         <div class="navItemWrapper">
           <div class="navItem">
-            GITHUB
+            GitHub
           </div>
         </div>
 
         <div class="navItemWrapper">
           <div class="navItem">
-            LINKEDIN
+            LinkedIn
           </div>
         </div>
 
@@ -194,6 +192,7 @@ background: rgba(0, 0, 0, 0.33);"></div>
 
             <div style="display: flex;">
 
+              <!--
               <div style="
               background: rgba(0, 0, 0, 0.5) url('pp_profile.png') no-repeat top left / 100% 100%;
               width: 200px;
@@ -202,21 +201,21 @@ background: rgba(0, 0, 0, 0.33);"></div>
               border: 1px solid rgba(0, 0, 0, 0.5);
               box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 1.0);
               "></div>
+              -->
 
-              <div>
+              <div style="padding: 20px;">
                 <h1 style="
                 font-family: 'Overpass', 'sans-serif';
-                text-shadow: 0px 1px 5px rgba(0, 0, 0, 1.0);
                 letter-spacing: 0.05em;">
                   I'm a full stack engineer with a strength in front end.
                 </h1>
-                <h2>
+                <p>
                   I've built large scale web apps in many web stacks.<br/>
                   Currently I work on both Backbone & React/Redux products.
-                </h2>
-                <h2>
+                </p>
+                <p>
                   I live in NYC and work at Ticket Evolution.
-                </h2>
+                </p>
               </div>
             </div>
 
@@ -230,13 +229,15 @@ background: rgba(0, 0, 0, 0.33);"></div>
             margin: 0 20px;
             ">
 
-              <div style="flex: 4; font-size: 1.8em;">
-                <h1 style="
+              <div style="flex: 4; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);">
+                <div class="flextainer flexitemscenter" style="
                 background: rgba(255, 255, 255, 0.9);
                 margin: 0;
                 padding: 10px 20px;
-                font-family: 'Overpass', 'sans-serif';
-                ">Front Front End</h1>
+                font-family: 'Overpass', 'sans-serif';">
+                  <img src="design.svg" style="width: 4em;" />
+                  <h1 style="font-family: 'Overpass', 'sans-serif'; margin: 0 0 0 15px; padding-top: 5px;">UI</h1>
+                </div>
                 <h2 style="background: rgba(255, 255, 255, 0.8); margin: 0; padding: 5px 20px;">HTML5</h2>
                 <h2 style="background: rgba(255, 255, 255, 0.7); margin: 0; padding: 5px 20px;">CSS3 (LESS, SASS)</h2>
                 <h2 style="background: rgba(255, 255, 255, 0.6); margin: 0; padding: 5px 20px;">Responsive Design</h2>
@@ -244,17 +245,31 @@ background: rgba(0, 0, 0, 0.33);"></div>
                 <h2 style="background: rgba(255, 255, 255, 0.4); margin: 0; padding: 5px 20px;">Photoshop, Sketch, etc.</h2>
               </div>
 
-              <div style="flex: 5; font-size: 2.2em;">
-                <h1 style="background: rgba(255, 255, 255, 0.9); margin: 0; padding: 5px 20px; font-family: 'Overpass', 'sans-serif';">Front End</h1>
-                <h2 style="background: rgba(255, 255, 255, 0.8); margin: 0; padding: 5px 20px;">JavaScript (ES6)</h2>
-                <h2 style="background: rgba(255, 255, 255, 0.7); margin: 0; padding: 5px 20px;">React / Redux</h2>
-                <h2 style="background: rgba(255, 255, 255, 0.6); margin: 0; padding: 5px 20px;">Backbone</h2>
-                <h2 style="background: rgba(255, 255, 255, 0.5); margin: 0; padding: 5px 20px;">OWASP 10</h2>
-                <h2 style="background: rgba(255, 255, 255, 0.4); margin: 0; padding: 5px 20px;">WebSockets, WebWorkers, AJAX, d3, etc.</h2>
+              <div style="flex: 5; z-index: 2; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);">
+                <div class="flextainer flexitemscenter" style="
+                background: rgba(255, 255, 255, 0.9);
+                margin: 0;
+                padding: 10px 20px;
+                font-family: 'Overpass', 'sans-serif';">
+                  <img src="front.svg" style="width: 4em; padding: 10px;" />
+                  <h1 style="font-family: 'Overpass', 'sans-serif'; margin: 0 0 0 15px; ">Front End</h1>
+                </div>
+                <h2 style="background: rgba(255, 255, 255, 0.8); margin: 0; padding: 10px 20px;">JavaScript (ES6)</h2>
+                <h2 style="background: rgba(255, 255, 255, 0.7); margin: 0; padding: 10px 20px;">React / Redux</h2>
+                <h2 style="background: rgba(255, 255, 255, 0.6); margin: 0; padding: 10px 20px;">Backbone</h2>
+                <h2 style="background: rgba(255, 255, 255, 0.5); margin: 0; padding: 10px 20px;">OWASP 10</h2>
+                <h2 style="background: rgba(255, 255, 255, 0.4); margin: 0; padding: 10px 20px;">WebSockets, WebWorkers, AJAX, d3, etc.</h2>
               </div>
 
-              <div style="flex: 4; font-size: 1.8em;">
-                <h1 style="background: rgba(255, 255, 255, 0.9); margin: 0; padding: 5px 20px; font-family: 'Overpass', 'sans-serif';">Back End</h1>
+              <div style="flex: 4; box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);">
+                <div class="flextainer flexitemscenter" style="
+                background: rgba(255, 255, 255, 0.9);
+                margin: 0;
+                padding: 10px 20px;
+                font-family: 'Overpass', 'sans-serif';">
+                  <img src="server.svg" style="width: 4em;" />
+                  <h1 style="font-family: 'Overpass', 'sans-serif'; margin: 0 0 0 15px; padding-top: 5px;">Back End</h1>
+                </div>
                 <h2 style="background: rgba(255, 255, 255, 0.8); margin: 0; padding: 5px 20px;">Node (Koa, Express)</h2>
                 <h2 style="background: rgba(255, 255, 255, 0.7); margin: 0; padding: 5px 20px;">Ruby on Rails</h2>
                 <h2 style="background: rgba(255, 255, 255, 0.6); margin: 0; padding: 5px 20px;">SQL</h2>
@@ -493,30 +508,19 @@ border: 1px solid rgba(0, 0, 0, 0.33);
       el.style.left = ~~coords.left + 'px';
     }
 
-    function resize() {
+    function resize(event) {
+      console.log('resize');
       var leftCoords = getCoords(left);
       var contentCoords = getCoords(content);
-      console.log(contentCoords);
+      //console.log('contentCoords', contentCoords, contentTop, content.offsetWidth);
       updateSize(leftTop, leftCoords, left.offsetWidth);
       updateSize(contentTop, contentCoords, content.offsetWidth);
       viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     }
 
-    document.addEventListener("DOMContentLoaded", function() {
-      left = document.getElementById('left');
-      content = document.getElementById('content');
-      leftTop = document.getElementById('leftTop');
-      contentTop = document.getElementById('contentTop');
-      resize();
-    });
-
-    window.addEventListener('resize', _.throttle(function(event){
-      resize();
-    }, LISTENER_RATE_LIMIT));
-
-    window.addEventListener('mousemove', _.throttle(function(event){
-
+    function alignToMouse(event) {
+      //console.log('alignToMouse', viewportWidth, viewportHeight);
       var inversePercentX = 100 * (1 - event.clientX / viewportWidth);
       var inversePercentY = 100 * (1 - event.clientY / viewportHeight);
       var distPercentX = 50 - inversePercentX;
@@ -532,8 +536,19 @@ border: 1px solid rgba(0, 0, 0, 0.33);
 
       // Manually tweak chrome.
       contentTop.style.width = ~~(content.offsetWidth + (inversePercentX * 0.12)) + 'px';
+      //console.log(content.offsetWidth, event.clientX, inversePercentX, contentTop.style.width);
+    }
 
-    }, LISTENER_RATE_LIMIT));
+    document.addEventListener("DOMContentLoaded", function() {
+      left = document.getElementById('left');
+      content = document.getElementById('content');
+      leftTop = document.getElementById('leftTop');
+      contentTop = document.getElementById('contentTop');
+      resize();
+    });
+
+    //window.addEventListener('resize', _.throttle(resize, LISTENER_RATE_LIMIT));
+    window.addEventListener('mousemove', _.throttle(alignToMouse, LISTENER_RATE_LIMIT));
 
     document.getElementById('left').addEventListener('click', function(e) {
       if (e.target.classList.contains('navItem')) {
@@ -546,6 +561,9 @@ border: 1px solid rgba(0, 0, 0, 0.33);
         }
       }
     });
+
+    // For bonus fun!
+    //setInterval(resize, 5000);
 
   }());
 
