@@ -18,6 +18,15 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+p, h3, h4, h5, .p {
+  font-family: 'Titillium Web', sans-serif;
+}
+p, .p {
+  font-size: 1.2em;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
+}
+
 .navItemWrapper {
   cursor: pointer;
   margin: 10px 20px 0;
@@ -80,10 +89,13 @@ html {
 
 .tag {
   font-family: 'Overpass', 'sans-serif';
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   color: rgba(0, 0, 0, 1.0);
+  text-shadow: 0px 1px 2px rgba(255, 255, 255, 1.0);
   border-radius: 4px;
-  padding: 2px 4px;
+  padding: 2px 5px;
+  line-height: 2.2em;
+  margin: 5px 2px;
 }
 
 /* FLEX FRAMEWORK ////////////////////////////////////////////////////////////*/

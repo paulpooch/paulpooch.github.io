@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style2.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.1/lodash.min.js" ></script>
 </head>
 <body style="
@@ -24,7 +25,7 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 <div class="flextainer flextainer flexcol" style="height: 100vh;">
 
   <!-- TOP BUFFER -->
-  <div style="height: 50px;"></div>
+  <div id="topBuffer" style="height: 50px;"></div>
 
   <div class="flex1 flextainer flexcenter flexitemsend" style="">
 
@@ -91,45 +92,35 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
           </div>
         </div>
 
-        <div class="navItemWrapper">
+        <a class="navItemWrapper" style="text-decoration: none;" href="#">
           <div class="navItem" data-section="home">
             Home
           </div>
-        </div>
+        </a>
 
-        <div class="navItemWrapper">
-          <div class="navItem">
+        <a class="navItemWrapper" style="text-decoration: none;" href="#projects">
+          <div class="navItem" data-section="projects">
             Projects
           </div>
-        </div>
+        </a>
 
-        <div class="navItemWrapper">
+        <a class="navItemWrapper" style="text-decoration: none;" href="#resume">
           <div class="navItem" data-section="resume">
             Resume
           </div>
-        </div>
+        </a>
 
-        <div class="navItemWrapper">
+        <a class="navItemWrapper" href="http://github.com/paulpooch" style="text-decoration: none;">
           <div class="navItem">
             GitHub
           </div>
-        </div>
+        </a>
 
-        <div class="navItemWrapper">
+        <a class="navItemWrapper" href="http://linkedin.com/in/paulpooch" style="text-decoration: none;">
           <div class="navItem">
             LinkedIn
           </div>
-        </div>
-
-        <!--
-        <div style="flex: 1; display: flex;">
-          <div style="
-          flex: 1;
-          opacity: 0.05;
-          background: transparent url('desk.png') no-repeat bottom left / 100% 100%;
-          "></div>
-        </div>
-        -->
+        </a>
 
       </div>
 
@@ -153,10 +144,10 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        overflow-y: auto;
         ">
 
           <!-- HOME -->
+          <a name="" />
           <div id="home" class="section" style="color: rgba(255, 255, 255, 1.0);">
 
             <div style="
@@ -222,7 +213,7 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
                 <h3 style="background: rgba(255, 255, 255, 0.7); margin: 0; padding: 10px 20px;">React / Redux</h3>
                 <h3 style="background: rgba(255, 255, 255, 0.6); margin: 0; padding: 10px 20px;">Backbone</h3>
                 <h3 style="background: rgba(255, 255, 255, 0.5); margin: 0; padding: 10px 20px;">App Security</h3>
-                <h3 style="background: rgba(255, 255, 255, 0.4); margin: 0; padding: 10px 20px;">WebSockets, WebWorkers, AJAX, d3, etc.</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.4); margin: 0; padding: 10px 20px;">WebSockets, WebWorkers, d3, etc.</h3>
               </div>
 
               <div class="flex4" style="box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);">
@@ -247,107 +238,164 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 
           </div>
 
+          <!-- PROJECTS -->
+          <a name="projects" />
+          <div id="projects" class="section" style="
+          display: none;
+          ">
+            PROJECTS
+          </div>
+
           <!-- RESUME -->
+          <a name="resume" />
           <div id="resume" class="section" style="
+          margin-top: 80px;
           display: none;
           color: rgba(255, 255, 255, 1.0);
           ">
 
-            <h1>Education</h1>
-            <h2>University of North Carolina at Chapel Hill</h2>
-            <p>
-              B.S. with Highest Honors, Computer Science<br/>
-              December 2007<br/>
-              3.73 Major GPA, 3.63 Overall GPA
-            </p>
+            <div class="flextainer">
+              <div class="flex1"></div>
+              <div class="flex5">
 
-            <h1>Technical Skills</h1>
-            <p>
-              Currently working in JavaScript.<br/>
-              <span class="tag">HTML5</span>
-              <span class="tag">CSS3</span>
-              <span class="tag">ES6 (JavaScript 2015)</span>
-              <span class="tag">Node</span>
-              <span class="tag">React</span>
-              <span class="tag">Redux</span>
-              <span class="tag">Backbone</span>
-              <span class="tag">Koa</span>
-              <span class="tag">Express</span>
-              <span class="tag">CoffeeScript</span>
-              <span class="tag">Express</span>
-              <span class="tag">LESS</span>
-              <span class="tag">SASS</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">WebSockets</span>
-              <span class="tag">Webpack</span>
-              <span class="tag">Gulp</span>
-              <span class="tag">Promises</span>
-              <span class="tag">Generators</span>
-              <span class="tag">Async</span>
-              <span class="tag">d3</span>
-              <br/>
-              And a Ruby on Rails powered API.<br/>
-              <span class="tag">Ruby</span>
-              <span class="tag">Rails</span>
-              <span class="tag">PostgreSQL</span>
-              <span class="tag">nginx</span>
-              <span class="tag">Memcached</span>
-              <br/>
-            </p>
-            <p>
-              Past experience in many web stacks.<br/>
-              .NET -
-              <span class="tag">ASP.NET Web Forms</span>
-              <span class="tag">C#</span>
-              <span class="tag">.NET</span>
-              <span class="tag">SQL</span>
-              <span class="tag">IIS</span>
-              <span class="tag">WPF</span>
-              <span class="tag">XAML</span>
-              <span class="tag">Silverlight</span>
-              <span class="tag">MVVM</span>
-              <br/>
-              LAMP -
-              <span class="tag">PHP</span>
-              <span class="tag">MySQL</span>
-              <span class="tag">Zend Framework</span>
-              <span class="tag">Apache</span>
-              <br/>
-              Java -
-              <span class="tag">JSP</span>
-              <span class="tag">Struts</span>
-              <span class="tag">Servlets</span>
-              <span class="tag">Oracle</span>
-              <span class="tag">WebSphere</span>
-              <br/>
-            </p>
-            <p>
-              Design skills including
-              <span class="tag">PhotoShop</span>,
-              <span class="tag">Responsive Design</span> &
-              <span class="tag">UX Theory</span>.
-            </p>
-            <p>
-              Experience building complex Android 2.x applications.
-              <span class="tag">Android</span>
-              <span class="tag">Services</span>
-              <span class="tag">C2DM</span>
-            </p>
-            <p>
+                <h1>Education</h1>
+                <h3>University of North Carolina at Chapel Hill</h3>
+                <p>
+                  B.S. with Highest Honors, Computer Science<br/>
+                  December 2007<br/>
+                  3.73 Major GPA, 3.63 Overall GPA
+                </p>
 
-            </p>
+                <h1>Technical Skills</h1>
+
+                <p>
+                  Currently working in JavaScript.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">ES6 (JavaScript 2015)</span>
+                  <span class="tag">Node</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Redux</span>
+                  <span class="tag">Backbone</span>
+                  <span class="tag">Koa</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">CoffeeScript</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">LESS</span>
+                  <span class="tag">SASS</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">WebSockets</span>
+                  <span class="tag">WebWorkers</span>
+                  <span class="tag">App Security (OWASP)</span>
+                  <span class="tag">Webpack</span>
+                  <span class="tag">Gulp</span>
+                  <span class="tag">Promises</span>
+                  <span class="tag">Generators</span>
+                  <span class="tag">Async</span>
+                  <span class="tag">d3</span>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  And a Ruby on Rails powered API.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">Ruby</span>
+                  <span class="tag">Rails</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">nginx</span>
+                  <span class="tag">Memcached</span>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  Past experience in many web stacks.
+                </p>
+
+                <div class="p">
+                  LAMP
+                  <div style="display: inline-block; margin-left: 10px; font-size: 0.85em;">
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Zend Framework</span>
+                    <span class="tag">Apache</span>
+                  </div>
+                </div>
+
+                <div class="p">
+                  Java
+                  <div style="display: inline-block; margin-left: 10px; font-size: 0.85em;">
+                    <span class="tag">JSP</span>
+                    <span class="tag">Struts</span>
+                    <span class="tag">Servlets</span>
+                    <span class="tag">Oracle</span>
+                    <span class="tag">WebSphere</span>
+                  </div>
+                </div>
+
+                <div class="p flextainer flexitemscenter" style="margin-top: 10px;">
+                  <div>.NET</div>
+                  <div style="margin-left: 10px; font-size: 0.85em;">
+                    <span class="tag">ASP.NET Web Forms</span>
+                    <span class="tag">C#</span>
+                    <span class="tag">.NET</span>
+                    <span class="tag">SQL</span>
+                    <span class="tag">IIS</span><br/>
+                    <span class="tag">WPF</span>
+                    <span class="tag">XAML</span>
+                    <span class="tag">Silverlight</span>
+                    <span class="tag">MVVM</span>
+                  </div>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  Design skills including:
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">LESS</span>
+                  <span class="tag">SASS</span>
+                  <span class="tag">PhotoShop</span>
+                  <span class="tag">Sketch</span>
+                  <span class="tag">Responsive Design</span>
+                  <span class="tag">UX Theory</span>
+                </div>
 
 
+                <p style="margin-top: 40px;">
+                  Experience building complex Android 2.x applications.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">Android</span>
+                  <span class="tag">Services</span>
+                  <span class="tag">Maps</span>
+                  <span class="tag">Threads</span>
+                  <span class="tag">Gestures</span>
+                  <span class="tag">C2DM</span>
+                </div>
 
+                <p style="margin-top: 40px;">
+                  And some other miscellaneous skills.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Graph Analytics</span>
+                  <span class="tag">Unix</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">GIS</span>
+                  <span class="tag">Hardware (building PCs)</span>
+                  <span class="tag">Networking</span>
+                  <span class="tag">EC2</span>
+                  <span class="tag">Elasticache</span>
+                  <span class="tag">DynamoDB</span>
+                  <span class="tag">S3</span>
+                  <span class="tag">Git</span>
+                  <span class="tag">TFS</span>
+                  <span class="tag" style="white-space: nowrap;">Bank of America certified - Web Application Security</span>
+                </div>
 
-
-
-            Android: Services, Maps, Threads, Gestures, C2DM and more
-            OWASP Top 10, Bank of America certified in Web Application Security Git, TFS
-            Unix
-            Python, GIS
-            EC2, ElastiCache, DynamoDB, S3 Hardware, Networking
-            Machine Learning
+              </div>
+              <div class="flex1"></div>
+            </div>
 
             <h1>Professional Experience</h1>
 
@@ -500,6 +548,13 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
     var viewportHeight = null;
     var viewportWidth = null;
 
+    function toggleSection(section) {
+      [].slice.call(document.getElementsByClassName('section')).forEach(function(el) {
+        el.style.display = 'none';
+      });
+      document.getElementById(section).style.display = 'block';
+    }
+
     function resize(event) {
       viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -520,15 +575,16 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
     }
 
     document.addEventListener("DOMContentLoaded", resize);
+    document.addEventListener("DOMContentLoaded", function() {
+      var parts = window.document.location.href.split('#');
+      parts.length > 1 && parts[1] && toggleSection(parts[1]);
+    });
 
     document.getElementById('left').addEventListener('click', function(e) {
       if (e.target.classList.contains('navItem')) {
         var section = e.target.getAttribute('data-section');
         if (section) {
-          [].slice.call(document.getElementsByClassName('section')).forEach(function(el) {
-            el.style.display = 'none';
-          });
-          document.getElementById(section).style.display = 'block';
+          toggleSection(section);
         }
       }
     });
