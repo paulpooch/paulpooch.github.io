@@ -147,7 +147,7 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
         ">
 
           <!-- HOME -->
-          <a name="" />
+          <a name="" ></a>
           <div id="home" class="section" style="color: rgba(255, 255, 255, 1.0);">
 
             <div style="
@@ -160,7 +160,7 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
               <div class="flex13" style="padding: 0 10px;">
                 <h1 style="
                 margin: 0;
-                letter-spacing: 0.05em;">
+                letter-spacing: 0.05rem;">
                   I'm a full stack engineer with a strength in front end.
                 </h1>
                 <p>
@@ -237,17 +237,19 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
             </div>
 
           </div>
+          <!-- END HOME -->
 
           <!-- PROJECTS -->
-          <a name="projects" />
+          <a name="projects" ></a>
           <div id="projects" class="section" style="
           display: none;
           ">
             PROJECTS
           </div>
+          <!-- END PROJECTS -->
 
           <!-- RESUME -->
-          <a name="resume" />
+          <a name="resume" ></a>
           <div id="resume" class="section" style="
           margin-top: 80px;
           display: none;
@@ -256,10 +258,16 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 
             <div class="flextainer">
               <div class="flex1"></div>
-              <div class="flex5">
+              <div class="flex5" style="padding-bottom: 60px;">
+
+                <div class="flextainer flexend">
+                  <div>
+                    PDF version available by request.
+                  </div>
+                </div>
 
                 <h1>Education</h1>
-                <h3>University of North Carolina at Chapel Hill</h3>
+                <h3 style="font-size: 1.4em;">University of North Carolina at Chapel Hill</h3>
                 <p>
                   B.S. with Highest Honors, Computer Science<br/>
                   December 2007<br/>
@@ -393,60 +401,120 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
                   <span class="tag" style="white-space: nowrap;">Bank of America certified - Web Application Security</span>
                 </div>
 
+                <h1>Professional Experience</h1>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                  <h2 style="margin: 0;">Ticket Evolution</h2>
+                  <h3 style="margin: 0;">February 2013 - Present</h3>
+                </div>
+                <h3>Lead Front End Engineer</h3>
+                <ul>
+                  <li>
+                    Responsible for front end architecture & tooling.
+                  </li>
+                  <li>
+                    Tech Lead for flagship web application - CORE Point of Sale system.<br/>
+                    Application allows Ticket Brokers to perform all job functions.
+                    <ul>
+                      <li>
+                        <a href="http://ticketevolution.com/products/point-of-sale" target="_blank" style="text-shadow: 0 1px 1px rgba(255, 255, 255, 1.0);">Overview</a> |
+                        <a href="http://ticketevolution.com/support/video-guides" target="_blank" style="text-shadow: 0 1px 1px rgba(255, 255, 255, 1.0);">Feature Videos</a>
+                      </li>
+                      <li>
+                        Inherited a half Rails, half Backbone codebase with multiple prior owners and 20% feature completion.
+                      </li>
+                      <li>
+                        Assumed ownership & converted to a feature complete, true Single Page App.
+                      </li>
+                      <li>
+                        Built complex UI components like barcode readers, interactive seating charts, access control
+                        permissioning, endless tables, large dataset filtering, and pdf uploaders.
+                      </li>
+                      <li>
+                        Continue to manage team, delegate work items, perform code reviews, build new features, etc.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Tech Lead for consumer facing ticket store.
+                    <ul>
+                      <li>
+                        <a href="http://friends.ticketevolution.com" target="_blank" style="text-shadow: 0 1px 1px rgba(255, 255, 255, 1.0);">Friends & Family instance of store.</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                  <h2 style="margin: 0;">Merrill Lynch</h2>
+                  <h3 style="margin: 0;">July 2008 - February 2013</h3>
+                </div>
+                <h3>Associate Vice President</h3>
+                <ul>
+                  <li>
+                    Technical Lead for a developer team of 5 building a corporate reporting application that collected
+                    financial results from hundreds of users.
+                    <ul>
+                      <li>
+                        Built in Java EE, JSP, Aspose.Cells, JavaScript/jQuery, HTML/CSS, WebSphere and Oracle.
+                      </li>
+                      <li>
+                        Only Middle Office application of 30+ to remain in green (on-schedule) status throughout its
+                        lifetime.
+                      </li>
+                      <li>
+                        Overcame time-zone and language barriers to effectively utilize offshore resources.
+                      </li>
+                      <li>
+                        Solved technical hurdles, distributed deliverables, owned source control,
+                        wrote performance sensitive JavaScript controls and Java servlets, recruited developers,
+                        integrated thousands of lines of code and all UI screens, requisitioned and managed 4 server
+                        environments, implemented all Bank audit and data recovery standards.
+                      </li>
+                      <li>
+                        End product currently used by the bank to file Form 10-K and 10-Q SEC reports.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Lead developer for a JavaScript report framework to wrap reports with a cohesive menu and toolbar
+                    system.
+                  </li>
+                  <li>
+                    Lead on Silverlight dashboard for realtime profit and loss analysis.
+                    <ul>
+                      <li>
+                        Researched and prototyped a Silverlight framework for building modular financial dashboards
+                        with real-time data streaming and on-demand component loading.
+                      </li>
+                      <li>
+                        Presented framework at Bank of America DevCon as the youngest presenter to date.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Prototyped a profit and loss application within the bank's Python based framework.
+                  </li>
+                </ul>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                  <h2 style="margin: 0;">Merrill Lynch</h2>
+                  <h3 style="margin: 0;">Summer 2007</h3>
+                </div>
+                <h3>Technology Analyst</h3>
+
+                <div style="display: flex; justify-content: space-between; margin-top: 40px;">
+                  <h2 style="margin: 0;">JPMorgan Chase</h2>
+                  <h3 style="margin: 0;">Summer 2006</h3>
+                </div>
+                <h3>Technology Intern</h3>
+
               </div>
               <div class="flex1"></div>
             </div>
 
-            <h1>Professional Experience</h1>
-
-            <div style="display: flex; justify-content: space-between">
-              <div>
-                <h2>Ticket Evolution</h2>
-              </div>
-              <div>
-                <h3>February 2013 - Present</h3>
-              </div>
-            </div>
-            <div>
-              <h3>Lead Front End Engineer</h3>
-              <ul>
-                <li>
-                  Responsible for front end architecture & tooling.
-                </li>
-                <li>
-                  Tech Lead for flagship web application - CORE Point of Sale system.<br/>
-                  Application allows Ticket Brokers to perform all job functions.
-                  <ul>
-                    <li>
-                      <a href="http://ticketevolution.com/products/point-of-sale">Overview</a> |
-                      <a href="http://ticketevolution.com/support/video-guides">Feature Videos</a>
-                    </li>
-                    <li>
-                      Inherited a half Rails, half Backbone codebase with multiple prior owners and 20% feature completion.
-                    </li>
-                    <li>
-                      Assumed ownership & converted to a feature complete, true Single Page App.
-                    </li>
-                    <li>
-                      Built complex UI components like barcode readers, interactive seating charts, access control
-                      permissioning, endless tables, large dataset filtering, and pdf uploaders.
-                    </li>
-                    <li>
-                      Continue to manage team, delegate work items, perform code reviews, build new features, etc.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  Tech Lead for consumer facing ticket store.
-                  <ul>
-                    <li>
-                      <a href="http://friends.ticketevolution.com">Friends & Family instance of store.</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
           </div>
+          <!-- END RESUME -->
 
         </div>
       </div>
