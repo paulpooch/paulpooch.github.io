@@ -13,14 +13,12 @@
   font-style: normal;
 }
 
+/* ELS ///////////////////////////////////////////////////////////////////////*/
 html {
   font-family: 'Titillium Web', 'Helvetica', 'Arial', 'sans-serif';
   -webkit-font-smoothing: antialiased;
 }
 h1, h2 {
-  font-family: 'Overpass', 'Helvetica', 'Arial', 'sans-serif';
-}
-.roundFont {
   font-family: 'Overpass', 'Helvetica', 'Arial', 'sans-serif';
 }
 p, .p {
@@ -37,10 +35,8 @@ a {
 a:hover, a:active {
   text-decoration: underline;
 }
-li {
-  font-size: 1.2rem;
-}
 
+/* CLASSES ///////////////////////////////////////////////////////////////////*/
 .navItemWrapper {
   font-family: 'Overpass', 'Helvetica', 'Arial', 'sans-serif';
   cursor: pointer;
@@ -93,24 +89,22 @@ li {
 }
 .navItem:hover, .navItem:focus, .navItem:active {
   color: rgba(0, 0, 0, 1.0);
-  /*text-shadow: 1px 1px 1px rgba(255, 255, 255, 1.0);*/
-  font-family: 'Overpass', 'sans-serif';
   text-shadow: none;
 }
 .navItem:hover:before, .navItem:focus:before, .navItem:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
 .tag {
-  font-family: 'Overpass', 'sans-serif';
   background: rgba(255, 255, 255, 0.5);
   color: rgba(0, 0, 0, 1.0);
-  text-shadow: 0px 1px 2px rgba(255, 255, 255, 1.0);
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 1.0);
   border-radius: 4px;
   padding: 2px 5px;
   line-height: 2.2rem;
   margin: 5px 2px;
+  font-size: 1.0rem;
+  font-weight: 500;
 }
 
 /* FLEX FRAMEWORK ////////////////////////////////////////////////////////////*/
