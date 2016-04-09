@@ -139,7 +139,10 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
       margin-left: -200px;
       z-index: 2;
       ">
-        <div style="height: 50px;"></div>
+        <div style="height: 50px;">
+          <!-- don't collapse -->
+          <div style="height: 50px;">&nbsp;</div>
+        </div>
         <div id="content" class="flex1" style="
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.33);
@@ -274,18 +277,81 @@ text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
               </ul>
 
               <h1>Ticket Evolution CORE Point of Sale</h1>
-              <h3>Highlights</h3>
+              <h2>Highlights</h2>
+
+              <div style="max-width: 900px;">
+
+                <div class="flextainer flexitemscenter">
+                  <img src="./screenshots/seating_chart.png" style="border: 1px solid #222;" />
+                  <div style="padding: 20px">
+                    <h3>
+                      Interactive seating charts that can be used to filter tickets, provide pricing guidance, and
+                      give sample views from every section.
+                    </h3>
+                    <div>
+                      Made in d3 and vanilla js.<br/>
+                      <br/>
+                      Available to select partners as a lightweight npm package.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flextainer flexitemscenter" style="margin-top: 50px;">
+                  <div style="padding: 20px">
+                    <h3>
+                      Analyzes etickets and automatically detects and enters barcodes on the user's behalf.
+                    </h3>
+                    <div>
+                      Made with webworkers (does not block UI thread) & canvas.<br/>
+                      <br/>
+                      Supports TicketMaster ("interleaved 2 of 5") barcodes.
+                    </div>
+                  </div>
+                  <img src="./screenshots/barcode_reader.png" style="border: 1px solid #222;" />
+                </div>
+
+                <div class="flextainer flexitemscenter" style="margin-top: 50px;">
+                  <img src="./screenshots/acl.png" style="border: 1px solid #222;" />
+                  <div style="padding: 20px">
+                    <h3>
+                      An Access Control List (ACL) system allows all features to be enabled/disabled
+                      based on the user's role and optional feature flags.
+                    </h3>
+                    <div>
+                      Resources are in a tree structure so entire feature sets can be white or blacklisted with one command.<br/>
+                      <br/>
+                      Roles can inherit from each other.<br/>
+                      <br/>
+                      Inspired by the Zend Framework ACL.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flextainer flexitemscenter" style="margin-top: 50px;">
+                  <div style="padding: 20px">
+                    <h3>
+                      Version manager prompts users when their application code is outdated.
+                    </h3>
+                    <div>
+                      Based on hash (fingerprint) of webpack build.<br/>
+                      <br/>
+                      Helps reduce support calls & prevents outdated code from being cached by browser.
+                    </div>
+                  </div>
+                  <img src="./screenshots/version_manager.png" style="border: 1px solid #222;" />
+                </div>
+
+              </div>
+
               <ul style="font-size: 1.2rem;">
                 <li>
-                  A webworker analyzes etickets and reads TicketMaster ("interleaved 2 of 5") barcodes -
-                  sparing the user from typing it in.
+
                 </li>
                 <li>
                   Sortable, filterable, exportable, url persistent datatable system with paginated and endless variants.
                 </li>
                 <li>
-                  An ACL type access control system allows all features to be enabled/disabled
-                  based on the user's role and optional feature flags.
+
                 </li>
                 <li>
                   Shopping cart, retail checkout payment & shipping wizards,
