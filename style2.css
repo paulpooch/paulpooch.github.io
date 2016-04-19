@@ -21,6 +21,30 @@ a:hover, a:active {
 }
 
 /* CLASSES ///////////////////////////////////////////////////////////////////*/
+.heavyWeight {
+  font-weight: 900;
+}
+.mediumWeight {
+  font-weight: 700;
+}
+.lightWeight {
+  font-weight: 600;
+}
+.uppers {
+  text-transform: uppercase;
+}
+.nowrap {
+  white-space: nowrap;
+}
+@media (max-width: 1000px) {
+  .goneSmall {
+    display: none;
+  }
+  .blockSmall {
+    display: block !important;
+  }
+}
+
 .navItemWrapper {
   cursor: pointer;
   margin: 10px 20px 0;
