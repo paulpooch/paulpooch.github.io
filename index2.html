@@ -1,14 +1,28 @@
+<!-- TODO SWAP FONT https://typekit.com/fonts/ff-enzo-web -->
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Paul Pucciarelli - Fullstack Engineer</title>
+  <title>Paul Pucciarelli - Full Stack Engineer</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style2.css">
+  <!--
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+  -->
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'jik1ugd',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.1/lodash.min.js" ></script>
 </head>
 <body style="
@@ -166,9 +180,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
             ">
               <div class="flex2"></div>
               <div class="flex13" style="padding: 0 10px;">
-                <h1 style="
-                margin: 0;
-                ">
+                <h1>
                   I'm a full stack engineer with a strength in front end.
                 </h1>
                 <p>
