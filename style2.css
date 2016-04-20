@@ -21,6 +21,7 @@ a:hover, a:active {
 }
 
 /* CLASSES ///////////////////////////////////////////////////////////////////*/
+
 .heavyWeight {
   font-weight: 900;
 }
@@ -36,6 +37,7 @@ a:hover, a:active {
 .nowrap {
   white-space: nowrap;
 }
+
 @media (max-width: 1000px) {
   .goneSmall {
     display: none;
@@ -102,6 +104,7 @@ a:hover, a:active {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
+
 .tag {
   background: rgba(255, 255, 255, 0.5);
   color: rgba(0, 0, 0, 1.0);
@@ -111,6 +114,65 @@ a:hover, a:active {
   line-height: 2.2rem;
   margin: 5px 2px;
   font-size: 1.0rem;
+}
+
+.highlight {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-top: 40px;
+}
+.highlight img {
+  flex: 1;
+  -webkit-flex: 1;
+  border: 1px solid #222;
+}
+.highlight h3 {
+  margin: 20px 0;
+}
+.highlight > div {
+  flex: 1;
+  -webkit-flex: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.highlight > div > div {
+  flex: 10;
+  -webkit-flex: 10;
+}
+
+.highlight > div::before {
+  content: '';
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.highlight.alt {
+  flex-wrap: wrap-reverse;
+  -webkit-flex-wrap: wrap-reverse;
+}
+.highlight.alt img {
+  order: 2;
+}
+.highlight.alt > div {
+  order: 1;
+}
+.highlight.alt > div::before {
+  content: none;
+}
+.highlight.alt > div::after {
+  content: '';
+  flex: 1;
+  -webkit-flex: 1;
 }
 
 /* FLEX FRAMEWORK ////////////////////////////////////////////////////////////*/
@@ -151,6 +213,10 @@ The second and third parameters (flex-shrink and flex-basis) are optional. Defau
 .flex7 {
   flex: 7;
   -webkit-flex: 7;
+}
+.flex10 {
+  flex: 10;
+  -webkit-flex: 10;
 }
 .flex13 {
   flex: 13;
