@@ -38,6 +38,9 @@ a:hover, a:active {
   white-space: nowrap;
 }
 
+#topBuffer {
+  height: 50px;
+}
 .shiftsMobile {
   margin-left: -200px;
 }
@@ -46,6 +49,9 @@ a:hover, a:active {
 }
 
 @media (max-width: 1000px) {
+  #topBuffer {
+    height: 70px;
+  }
   .appearsMobile {
     display: block !important;
   }
@@ -57,6 +63,12 @@ a:hover, a:active {
   }
   .shiftsMobile {
     margin-left: 0;
+  }
+  .navItem {
+    padding: 13px 20px !important;
+  }
+  .navItemWrapper {
+    margin: 0 5px !important;
   }
 }
 
