@@ -42,12 +42,12 @@ a:hover, a:active {
   margin-left: -200px;
 }
 .appearsMobile {
-  display: none;
+  display: none !important;
 }
 
 @media (max-width: 1000px) {
   .appearsMobile {
-    display: block;
+    display: block !important;
   }
   .blockMobile {
     display: block !important;

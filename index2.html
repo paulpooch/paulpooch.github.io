@@ -46,6 +46,39 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
   <!-- TOP BUFFER -->
   <div id="topBuffer" style="height: 50px;"></div>
 
+  <!-- TOP NAV -->
+  <div class="appearsMobile flextainer flexcenter flexitemsend" style="">
+    <div class="flex1"></div>
+    <div class="flex30 flextainer" style="height: 100px;">
+      <!-- LEFT SIDE OF TOP NAV -->
+      <div style="
+      width: 180px;
+      margin-left: -180px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-50px) translateX(-40px) translateY(50px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-right: none;
+      "></div>
+      <!-- TOP NAV CONTENT -->
+      <div class="flex1" style="
+      z-index: 2;
+      transform: translateZ(-50px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-right: none;
+      "></div>
+      <!-- RIGHT SIDE OF TOP NAV -->
+      <div style="
+      width: 180px;
+      margin-left: -180px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-50px) translateX(-40px) translateY(50px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      "></div>
+    </div>
+    <div class="flex1"></div>
+  </div>
+
   <div class="flex1 flextainer flexcenter flexitemsend" style="">
 
     <!-- LEFT GUTTER -->
