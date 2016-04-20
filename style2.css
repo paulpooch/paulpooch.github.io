@@ -38,12 +38,25 @@ a:hover, a:active {
   white-space: nowrap;
 }
 
+.shiftsMobile {
+  margin-left: -200px;
+}
+.appearsMobile {
+  display: none;
+}
+
 @media (max-width: 1000px) {
-  .goneSmall {
-    display: none;
+  .appearsMobile {
+    display: block;
   }
-  .blockSmall {
+  .blockMobile {
     display: block !important;
+  }
+  .hidesMobile {
+    display: none !important;
+  }
+  .shiftsMobile {
+    margin-left: 0;
   }
 }
 

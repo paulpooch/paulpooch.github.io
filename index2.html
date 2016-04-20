@@ -56,9 +56,8 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
     ">
 
       <!-- LEFT SIDE OF LEFT COL -->
-      <div style="
+      <div class="hidesMobile shiftsMobile" style="
       width: 200px;
-      margin-left: -200px;
       background: rgba(255, 255, 255, 0.1);
       transform: translateX(50%) rotateY(90deg) translateX(50%);
       border: 1px solid rgba(0, 0, 0, 0.33);
@@ -66,7 +65,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
       "></div>
 
       <!-- LEFT COL -->
-      <div id="left" class="flex2 flextainer flexcol" style="
+      <div id="left" class="hidesMobile flex2 flextainer flexcol" style="
       color: rgba(255, 255, 255, 1.0);
       border: 1px solid rgba(0, 0, 0, 0.33);
       border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -144,7 +143,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
       </div>
 
       <!-- RIGHT SIDE OF LEFT COL -->
-      <div style="
+      <div class="hidesMobile" style="
       width: 200px;
       background: rgba(255, 255, 255, 0.1);
       transform: translateX(-50%) rotateY(90deg) translateX(50%);
@@ -152,17 +151,27 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
       border-left: none;
       "></div>
 
+      <!-- LEFT SIDE OF CONTENT AREA -->
+      <div class="appearsMobile" style="
+      margin-top: 50px;
+      margin-left: -160px;
+      width: 160px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-120px) rotateY(90deg) translateZ(80px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
+
       <!-- CONTENT AREA -->
-      <div class="flex7 flextainer flexcol" style="
+      <div class="flex7 flextainer flexcol shiftsMobile" style="
       transform: translateZ(-40px);
-      margin-left: -200px;
       z-index: 2;
       ">
         <div style="height: 50px;">
           <!-- don't collapse -->
           <div style="height: 50px;">&nbsp;</div>
         </div>
-        <div id="content" class="flex1" style="
+        <div class="flex1" style="
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -175,7 +184,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
             <div class="flextainer flexcenter flexitemscenter" style="
             margin: 80px 0 20px;
             ">
-              <div class="flex1 goneSmall"></div>
+              <div class="flex1 hidesMobile"></div>
               <div class="flex13" style="padding: 0 30px;">
 
                 <h1 class="heavyWeight uppers">
@@ -194,16 +203,16 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                 </p>
 
               </div>
-              <div class="flex1 goneSmall"></div>
+              <div class="flex1 hidesMobile"></div>
             </div>
 
-            <div class="flextainer flexcenter flexitemscenter blockSmall" style="
+            <div class="flextainer flexcenter flexitemscenter blockMobile" style="
             color: rgba(50, 50, 50, 1.0);
             text-shadow: 0 1px 2px rgba(255, 255, 255, 1.0);
             padding: 0 30px;
             ">
 
-              <div class="flex1 goneSmall"></div>
+              <div class="flex1 hidesMobile"></div>
 
               <div class="flex4" style="
               box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
@@ -265,7 +274,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                 <h3 style="background: rgba(255, 255, 255, 0.4); padding: 8px 20px;">Unix, AWS, Caching, etc.</h3>
               </div>
 
-              <div class="flex1 goneSmall"></div>
+              <div class="flex1 hidesMobile"></div>
 
             </div>
 
@@ -281,7 +290,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
           ">
             <div class="flextainer">
 
-              <div class="flex1 goneSmall"></div>
+              <div class="flex1 hidesMobile"></div>
 
               <div class="flex10" style="padding: 0 30px 60px;">
 
@@ -467,7 +476,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                 </script>
               </div>
 
-              <div class="flex1 goneSmall"></div>
+              <div class="flex1 hidesMobile"></div>
 
             </div>
           </div>
@@ -785,12 +794,11 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
     height: calc(100vh - 100px);
     ">
       <!-- LEFT SIDE OF LEFT COL -->
-      <div style="
+      <div class="hidesMobile shiftsMobile" style="
       width: 200px;
-      margin-left: -200px;
       "></div>
       <!-- TOP OF LEFT COL -->
-      <div id="left" class="flex2 flextainer flexcol" style="
+      <div id="left" class="hidesMobile flex2 flextainer flexcol" style="
       height: 200px;
       border: 1px solid rgba(0, 0, 0, 0.33);
       background: rgba(255, 255, 255, 0.05);
@@ -798,16 +806,14 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
       ">
       </div>
       <!-- RIGHT SIDE OF LEFT COL -->
-      <div style="
+      <div class="hidesMobile" style="
       width: 200px;
       "></div>
       <!-- CONTENT AREA -->
-      <div class="flex7 flextainer flexcol" style="
-      margin-left: -200px;
-      ">
+      <div class="shiftsMobile flex7 flextainer flexcol">
         <div style="height: 50px;"></div>
         <!-- TOP OF CONTENT AREA -->
-        <div id="content" style="
+        <div style="
         height: 160px;
         background: rgba(255, 255, 255, 0.05);
         border: 1px solid rgba(0, 0, 0, 0.33);
