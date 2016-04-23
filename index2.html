@@ -35,6 +35,7 @@ background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25
 background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 ">
+
 <!--
 background: #7b4397; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
@@ -55,14 +56,14 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
       width: 180px;
       margin-left: -180px;
       background: rgba(255, 255, 255, 0.1);
-      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-50px) translateX(-50px) translateY(-10px);
+      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-45px) translateX(-50px) translateY(-10px);
       border: 1px solid rgba(0, 0, 0, 0.33);
       border-right: none;
       "></div>
       <!-- TOP NAV CONTENT -->
       <div class="flex1 flextainer" style="
       z-index: 3;
-      transform: translateZ(-40px) translateY(-60px);
+      transform: translateZ(-40px) translateY(-55px);
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(0, 0, 0, 0.33);
       border-right: none;
@@ -70,7 +71,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
 
         <a href="/">
           <div class="flextainer flexcenter flexcol" style="
-          margin: 10px;
+          margin: 5px;
           background: rgba(0, 0, 0, 0.1);
           -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
           -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
@@ -79,20 +80,20 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
           border-left: 1px solid rgba(255, 255, 255, 0.5);
           border-bottom: 1px solid rgba(255, 255, 255, 0.5);
           border-right: 1px solid rgba(0, 0, 0, 0.5);
-          border-radius: 10px;
+          border-radius: 5px;
           ">
             <div
             class="flex1"
             style="
             opacity: 1.0;
-            margin: 10px;
+            margin: 5px;
             background: transparent url('pp.png') no-repeat center center / 100% 100%;
             -webkit-background-size: contain;
             -moz-background-size: contain;
             -o-background-size: contain;
             background-size: contain;
-            height: 60px;
-            width: 60px;
+            height: 40px;
+            width: 40px;
             text-align: center;
             -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.8));
             filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
@@ -104,13 +105,13 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
         <div class="flex1 flextainer flexcenter">
           <div id="topNav" class="flextainer flexitemscenter">
 
-             <a class="navItemWrapper" style="text-decoration: none;" href="#projects">
+             <a class="navItemWrapper" style="text-decoration: none;">
               <div class="navItem" data-section="projects">
                 Projects
               </div>
             </a>
 
-            <a class="navItemWrapper" style="text-decoration: none;" href="#resume">
+            <a class="navItemWrapper" style="text-decoration: none;">
               <div class="navItem" data-section="resume">
                 Resume
               </div>
@@ -118,13 +119,13 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
 
             <a class="navItemWrapper" href="http://github.com/paulpooch" style="text-decoration: none;">
               <div class="navItem" style="padding: 6px 10px 3px !important;">
-                <img src="./github.png" />
+                <img src="./github.png" style="width: 24px; height: 24px;"/>
               </div>
             </a>
 
             <a class="navItemWrapper" href="http://linkedin.com/in/paulpooch" style="text-decoration: none;">
               <div class="navItem" style="padding: 5px 6px 2px !important;">
-                <img src="./linkedin.png" />
+                <img src="./linkedin.png" style="width: 26px; height: 26px;"/>
               </div>
             </a>
 
@@ -137,7 +138,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
       width: 180px;
       margin-left: -180px;
       background: rgba(255, 255, 255, 0.1);
-      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-50px) translateX(-50px) translateY(-10px);
+      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-45px) translateX(-50px) translateY(-10px);
       border: 1px solid rgba(0, 0, 0, 0.33);
       "></div>
     </div>
@@ -269,21 +270,20 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
           <!-- don't collapse -->
           <div style="height: 50px;">&nbsp;</div>
         </div>
-        <div class="flex1" style="
+        <div id="contentArea" class="flex1" style="
         background: rgba(255, 255, 255, 0.2);
         border: 1px solid rgba(0, 0, 0, 0.33);
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         ">
 
           <!-- HOME -->
-          <a name="" ></a>
           <div id="home" class="section" style="color: rgba(255, 255, 255, 1.0);">
 
             <div class="flextainer flexcenter flexitemscenter" style="
-            margin: 80px 0 20px;
+            margin: 20px 20px 10px;
             ">
               <div class="flex1 hidesMobile"></div>
-              <div class="flex13" style="padding: 0 30px;">
+              <div class="flex13">
 
                 <h1 class="heavyWeight uppers">
                   I'm a full stack engineer<br/>
@@ -307,7 +307,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
             <div class="flextainer flexcenter flexitemscenter blockMobile" style="
             color: rgba(50, 50, 50, 1.0);
             text-shadow: 0 1px 2px rgba(255, 255, 255, 1.0);
-            padding: 0 30px;
+            margin: 10px 20px;
             ">
 
               <div class="flex1 hidesMobile"></div>
@@ -380,9 +380,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
           <!-- END HOME -->
 
           <!-- PROJECTS -->
-          <a name="projects" ></a>
           <div id="projects" class="section" style="
-          margin-top: 80px;
           display: none;
           color: rgba(255, 255, 255, 1.0);
           ">
@@ -390,35 +388,30 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
 
               <div class="flex1 hidesMobile"></div>
 
-              <div class="flex10" style="padding: 0 30px 60px;">
+              <div class="flex10" style="
+              margin: 20px;
+              ">
 
                 <h1 class="heavyWeight uppers">Ticket Evolution Store</h1>
-
-                <h2 class="mediumWeight" style="margin-top: 20px;">Highlights</h2>
-
+                <h2 class="mediumWeight" style="margin-top: 10px;">Highlights</h2>
                 <p>
-                  Interactive seating charts show what provide ticket locations, filtering capabilities, pricing info,
-                  and seat previews.
+                  A retail ticket store that can repurposed for multiple partners.
                 </p>
-
                 <p>
-                  A node based proxy signs and forwards Ticket Evolution API requests with the store owners
-                  API credentials.
+                  Utilizes my <a href="https://github.com/ticketevolution/ticketevolution-node" class="noShadow">ticketevolution-node</a>
+                  API client to forward requests with the store owners API credentials.
                 </p>
-
                 <p>
                   Mobile responsive, lightweight, clean design.
                 </p>
-
                 <p>
-                  Repo can be cloned and any API user has an instant retail presence to be customized as
-                  much or as little as they choose.
+                  <a href="https://store.ticketevolution.com" class="noShadow">
+                    Visit the sandbox instance.
+                  </a>
                 </p>
 
-                <h1 class="heavyWeight uppers" style="margin-top: 100px;">Ticket Evolution CORE Point of Sale</h1>
-
-                <h2 class="mediumWeight" style="margin-top: 20px;">Highlights</h2>
-
+                <h1 class="heavyWeight uppers" style="margin-top: 50px;">Ticket Evolution CORE Point of Sale</h1>
+                <h2 class="mediumWeight" style="margin-top: 10px;">Highlights</h2>
                 <div class="highlight">
                   <img src="./screenshots/seating_chart.png" />
                   <div>
@@ -427,13 +420,12 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                         Interactive seating charts that can be used to filter tickets, provide pricing guidance, and
                         give sample views from every section.
                       </h3>
-                      Made in <a href="https://d3js.org/">d3</a> and vanilla js.<br/>
+                      Made in <a href="https://d3js.org/" class="noShadow">d3</a> and vanilla js.<br/>
                       <br/>
                       Available to select partners as a lightweight npm package.
                     </div>
                   </div>
                 </div>
-
                 <div class="highlight alt">
                   <img src="./screenshots/barcode_reader.png" />
                   <div>
@@ -447,7 +439,6 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                     </div>
                   </div>
                 </div>
-
                 <div class="highlight">
                   <img src="./screenshots/mass_edit.png" />
                   <div>
@@ -458,7 +449,6 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                     </div>
                   </div>
                 </div>
-
                 <div class="highlight alt">
                   <img src="./screenshots/acl.png" />
                   <div>
@@ -475,7 +465,6 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                     </div>
                   </div>
                 </div>
-
                 <div class="highlight">
                   <img src="./screenshots/version_manager.png" />
                   <div>
@@ -489,7 +478,6 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                     </div>
                   </div>
                 </div>
-
                 <div class="highlight alt">
                   <img src="./screenshots/filters.png" />
                   <div>
@@ -508,14 +496,26 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                   </div>
                 </div>
 
-                <h1 class="heavyWeight uppers" style="margin-top: 100px;">Juicytracks</h1>
+                <h1 class="heavyWeight uppers" style="margin-top: 50px;">Juicytracks</h1>
+                <h2 class="mediumWeight" style="margin-top: 10px; margin-bottom: 20px;">Highlights</h2>
+                <img class="scalingImg" src="./screenshots/jt2.png" />
+                <p>
+                  A SoundCloud powered music sharing site.
+                </p>
+                <p>
+                  Tracked song listens on a granular level (to the second) using websockets.
+                </p>
+                <p>
+                  Hoped to derive rankings from the the average listen percentage of a song and the reputation of the user that shared it.
+                </p>
+                <img class="scalingImg" src="./screenshots/jt1.png" />
 
-                <h1 class="heavyWeight uppers" style="margin: 100px 0 50px;">Shoutbreak</h1>
-
+                <h1 class="heavyWeight uppers" style="margin: 50px 0 50px;">Shoutbreak</h1>
                 <div class="flextainer flexend">
-                  <img src="./screenshots/shoutbreak_logo.png" style="display: block; -webkit-filter: drop-shadow(rgba(255, 255, 255, 1.0) 0 1px 3px);" />
+                  <img src="./screenshots/shoutbreak_logo.png" class="scalingImg" style="
+                  -webkit-filter: drop-shadow(rgba(255, 255, 255, 1.0) 0 1px 3px);
+                  " />
                 </div>
-
                 <div class="highlight alt" style="margin-top: 0;">
                   <div>
                     <div style="min-width: 200px;">
@@ -572,6 +572,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                   setImg(index);
                 }());
                 </script>
+
               </div>
 
               <div class="flex1 hidesMobile"></div>
@@ -581,16 +582,18 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
           <!-- END PROJECTS -->
 
           <!-- RESUME -->
-          <a name="resume" ></a>
           <div id="resume" class="section" style="
-          margin-top: 80px;
           display: none;
           color: rgba(255, 255, 255, 1.0);
           ">
 
             <div class="flextainer">
-              <div class="flex1"></div>
-              <div class="flex5" style="padding-bottom: 60px;">
+
+              <div class="flex1 hidesMobile"></div>
+
+              <div class="flex10" style="
+              margin: 20px;
+              ">
 
                 <div class="flextainer flexend">
                   <div>
@@ -598,15 +601,21 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                   </div>
                 </div>
 
-                <h1>Education</h1>
-                <h3 style="font-size: 1.4rem;">University of North Carolina at Chapel Hill</h3>
+                <h1 style="margin-top: 50px;">
+                  Education
+                </h1>
+                <h3 style="margin-top: 10px;">
+                  University of North Carolina at Chapel Hill
+                </h3>
                 <p>
                   B.S. with Highest Honors, Computer Science<br/>
                   December 2007<br/>
                   3.73 Major GPA, 3.63 Overall GPA
                 </p>
 
-                <h1>Technical Skills</h1>
+                <h1 style="margin-top: 50px;">
+                  Technical Skills
+                </h1>
 
                 <p>
                   Currently working in JavaScript.
@@ -650,41 +659,49 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
                   Past experience in many web stacks.
                 </p>
 
-                <div class="p">
-                  LAMP
-                  <div style="display: inline-block; margin-left: 10px;">
-                    <span class="tag">PHP</span>
-                    <span class="tag">MySQL</span>
-                    <span class="tag">Zend Framework</span>
-                    <span class="tag">Apache</span>
-                  </div>
-                </div>
-
-                <div class="p">
-                  Java
-                  <div style="display: inline-block; margin-left: 10px;">
-                    <span class="tag">JSP</span>
-                    <span class="tag">Struts</span>
-                    <span class="tag">Servlets</span>
-                    <span class="tag">Oracle</span>
-                    <span class="tag">WebSphere</span>
-                  </div>
-                </div>
-
-                <div class="p flextainer flexitemscenter" style="margin-top: 10px;">
-                  <div>.NET</div>
-                  <div style="margin-left: 10px;">
-                    <span class="tag">ASP.NET Web Forms</span>
-                    <span class="tag">C#</span>
-                    <span class="tag">.NET</span>
-                    <span class="tag">SQL</span>
-                    <span class="tag">IIS</span><br/>
-                    <span class="tag">WPF</span>
-                    <span class="tag">XAML</span>
-                    <span class="tag">Silverlight</span>
-                    <span class="tag">MVVM</span>
-                  </div>
-                </div>
+                <p>
+                  <table>
+                    <tr>
+                      <td>
+                        LAMP
+                      </td>
+                      <td style="padding-left: 10px;">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Zend Framework</span>
+                        <span class="tag">Apache</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 10px;">
+                        Java
+                      </td>
+                      <td style="padding-top: 10px; padding-left: 10px;">
+                        <span class="tag">JSP</span>
+                        <span class="tag">Struts</span>
+                        <span class="tag">Servlets</span>
+                        <span class="tag">Oracle</span>
+                        <span class="tag">WebSphere</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 10px;">
+                        .NET
+                      </td>
+                      <td style="padding-top: 10px; padding-left: 10px;">
+                        <span class="tag">ASP.NET Web Forms</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">IIS</span><br/>
+                        <span class="tag">WPF</span>
+                        <span class="tag">XAML</span>
+                        <span class="tag">Silverlight</span>
+                        <span class="tag">MVVM</span>
+                      </td>
+                    </tr>
+                  </table>
+                </p>
 
                 <p style="margin-top: 40px;">
                   Design skills including:
@@ -933,7 +950,6 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
   <div style="height: 50px;"></div>
 </div>
 
-</body>
 <script>
 
   (function() {
@@ -945,11 +961,16 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
     var viewportHeight = null;
     var viewportWidth = null;
 
+    const MOBILE_BREAKPOINT = 1000;
+    const isMobile = ((window.innerWidth > 0) ? window.innerWidth : screen.width) < MOBILE_BREAKPOINT;
+
     function toggleSection(section) {
       [].slice.call(document.getElementsByClassName('section')).forEach(function(el) {
         el.style.display = 'none';
       });
       document.getElementById(section).style.display = 'block';
+      var parts = window.document.location.href.split('#');
+      window.history.replaceState({}, 'Paul Pucciarelli - Full Stack Engineer', parts[0] + '#' + section);
     }
 
     function resize(event) {
@@ -958,17 +979,19 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
     }
 
     function alignToMouse(event) {
-      var inversePercentX = 100 * (1 - event.clientX / viewportWidth);
-      var inversePercentY = 100 * (1 - event.clientY / viewportHeight);
-      var distPercentX = 50 - inversePercentX;
-      var distPercentY = 50 - inversePercentY;
-      var distPercent = Math.sqrt(distPercentX * distPercentX + distPercentY * distPercentY);
-      var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * distPercent), 100);
+      if (!isMobile) {
+        var inversePercentX = 100 * (1 - event.clientX / viewportWidth);
+        var inversePercentY = 100 * (1 - event.clientY / viewportHeight);
+        var distPercentX = 50 - inversePercentX;
+        var distPercentY = 50 - inversePercentY;
+        var distPercent = Math.sqrt(distPercentX * distPercentX + distPercentY * distPercentY);
+        var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * distPercent), 100);
 
-      document.body.style.webkitPerspective = ~~perspective + 'px';
-      document.body.style.webkitPerspectiveOrigin = ~~inversePercentX + '% ' + ~~inversePercentY + '% ';
-      document.body.style.marginLeft = ~~(MOVE_MUTE_FACTOR * distPercentX) + 'px';
-      document.body.style.marginTop = ~~(MOVE_MUTE_FACTOR * distPercentY) + 'px';
+        document.body.style.webkitPerspective = ~~perspective + 'px';
+        document.body.style.webkitPerspectiveOrigin = ~~inversePercentX + '% ' + ~~inversePercentY + '% ';
+        document.body.style.marginLeft = ~~(MOVE_MUTE_FACTOR * distPercentX) + 'px';
+        document.body.style.marginTop = ~~(MOVE_MUTE_FACTOR * distPercentY) + 'px';
+      }
     }
 
     document.addEventListener("DOMContentLoaded", resize);
@@ -982,6 +1005,8 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
         var section = e.target.getAttribute('data-section');
         if (section) {
           toggleSection(section);
+          e.preventDefault();
+          e.stopPropagation();
         }
       }
     }
@@ -994,4 +1019,5 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
   }());
 
 </script>
+</body>
 </html>
