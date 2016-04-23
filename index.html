@@ -1,44 +1,1030 @@
+<!-- TODO SWAP FONT https://typekit.com/fonts/ff-enzo-web -->
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Paul Pucciarelli - Fullstack Engineer</title>
+  <title>Paul Pucciarelli - Full Stack Engineer</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="normalize.css">
   <link rel="stylesheet" href="style.css">
+  <!--
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+  -->
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'jik1ugd',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.2.1/lodash.min.js" ></script>
 </head>
-<body>
-<div class="flextainer flexitemscenter" style="min-height: 100vh;">
-  <div id="bar" class="flextainer flexcenter">
-    <div id="content">
-      <header>
-        <h1>Paul Pucciarelli</h1>
-        <h2>A full stack developer currently living in NYC.</h2>
-      </header>
-      <article>
-        <p>I work at <a href="http://www.ticketevolution.com">Ticket Evolution</a> and lead development on their
-          <a href="http://www.ticketevolution.com/products/point-of-sale">Point of Sale</a>.
-        </p>
-        <p>
-          Over the years I've done full stack work in many different flavors of web stacks and databases.
-          My greatest strength is building single page apps in JavaScript; but I am capable in everything from Photoshop to SQL.
-        </p>
-        <p>
-          Some of my more recent projects include d3 based interactive stadium seating charts,
-          a canvas based barcode reader,
-          and a javascript ad unit that displays tickets for popular local events.
-        </p>
-      </article>
-      <footer>
-        You can check me out on
-        <a href="https://www.linkedin.com/in/paulpooch">LinkedIn</a>
-        or
-        <a href="https://github.com/paulpooch">GitHub</a>.
-      </footer>
+<body style="
+min-height: 800px;
+perspective: 400px;
+-webkit-perspective: 1000px;
+-webkit-perspective-origin: 50% 50%;
+background: #4B79A1; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #4B79A1 , #283E51); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #4B79A1 , #283E51); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+">
+
+<!--
+background: #7b4397; /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #7b4397 , #dc2430); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+-->
+
+<div class="flextainer flextainer flexcol" style="height: 100vh;">
+
+  <!-- TOP BUFFER -->
+  <div id="topBuffer"></div>
+
+  <!-- TOP NAV -->
+  <div class="appearsMobile flextainer flexcenter flexitemsend" style="color: rgba(255, 255, 255, 1.0);">
+    <div class="flex1"></div>
+    <div class="flex30 flextainer">
+      <!-- LEFT SIDE OF TOP NAV -->
+      <div style="
+      width: 180px;
+      margin-left: -180px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-45px) translateX(-50px) translateY(-10px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-right: none;
+      "></div>
+      <!-- TOP NAV CONTENT -->
+      <div class="flex1 flextainer" style="
+      z-index: 3;
+      transform: translateZ(-40px) translateY(-55px);
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-right: none;
+      ">
+
+        <a href="/">
+          <div class="flextainer flexcenter flexcol" style="
+          margin: 5px;
+          background: rgba(0, 0, 0, 0.1);
+          -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+          -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+          box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+          border-top: 1px solid rgba(0, 0, 0, 0.5);
+          border-left: 1px solid rgba(255, 255, 255, 0.5);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          border-right: 1px solid rgba(0, 0, 0, 0.5);
+          border-radius: 5px;
+          ">
+            <div
+            class="flex1"
+            style="
+            opacity: 1.0;
+            margin: 5px;
+            background: transparent url('pp.png') no-repeat center center / 100% 100%;
+            -webkit-background-size: contain;
+            -moz-background-size: contain;
+            -o-background-size: contain;
+            background-size: contain;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.8));
+            filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+            ">
+            </div>
+          </div>
+        </a>
+
+        <div class="flex1 flextainer flexcenter">
+          <div id="topNav" class="flextainer flexitemscenter">
+
+             <a class="navItemWrapper" style="text-decoration: none;">
+              <div class="navItem" data-section="projects">
+                Projects
+              </div>
+            </a>
+
+            <a class="navItemWrapper" style="text-decoration: none;">
+              <div class="navItem" data-section="resume">
+                Resume
+              </div>
+            </a>
+
+            <a class="navItemWrapper" href="http://github.com/paulpooch" style="text-decoration: none;">
+              <div class="navItem" style="padding: 6px 10px 3px !important;">
+                <img src="./github.png" style="width: 24px; height: 24px;"/>
+              </div>
+            </a>
+
+            <a class="navItemWrapper" href="http://linkedin.com/in/paulpooch" style="text-decoration: none;">
+              <div class="navItem" style="padding: 5px 6px 2px !important;">
+                <img src="./linkedin.png" style="width: 26px; height: 26px;"/>
+              </div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- RIGHT SIDE OF TOP NAV -->
+      <div style="
+      width: 180px;
+      margin-left: -180px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-180px) rotateY(90deg) translateZ(90px) translateY(-45px) translateX(-50px) translateY(-10px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      "></div>
     </div>
+    <div class="flex1"></div>
   </div>
+
+  <div class="flex1 flextainer flexcenter flexitemsend" style="">
+
+    <!-- LEFT GUTTER -->
+    <div class="flex1"></div>
+
+    <div class="flex30 flextainer" style="
+    height: calc(100vh - 100px);
+    ">
+
+      <!-- LEFT SIDE OF LEFT COL -->
+      <div class="hidesMobile shiftsMobile" style="
+      width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(50%) rotateY(90deg) translateX(50%);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
+
+      <!-- LEFT COL -->
+      <div id="left" class="hidesMobile flex2 flextainer flexcol" style="
+      color: rgba(255, 255, 255, 1.0);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.2);
+      ">
+
+        <div class="flextainer flexcenter flexcol" style="
+        margin: 20px 20px 10px;
+        background: rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+        box-shadow: inset 0px 0px 5px 1px rgba(0,0,0,0.5);
+        border-top: 1px solid rgba(0, 0, 0, 0.5);
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        ">
+          <div
+          class="flex1"
+          style="
+          opacity: 1.0;
+          margin-top: 15px;
+          background: transparent url('pp.png') no-repeat center center / 100% 100%;
+          -webkit-background-size: contain;
+          -moz-background-size: contain;
+          -o-background-size: contain;
+          background-size: contain;
+          min-height: 100px;
+          text-align: center;
+          -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.8));
+          filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.8));
+          ">
+          </div>
+          <div class="flexselfcenter" style="
+          color: rgba(255, 255, 255, 1.0);
+          padding: 10px 15px 5px;
+          white-space: nowrap;
+          margin-left: -10px;
+          ">
+            <h3 style="margin: 5px 0;" class="lightWeight">Paul Pucciarelli</h3>
+          </div>
+        </div>
+
+        <a class="navItemWrapper" style="text-decoration: none;" href="#">
+          <div class="navItem" data-section="home">
+            Home
+          </div>
+        </a>
+
+        <a class="navItemWrapper" style="text-decoration: none;" href="#projects">
+          <div class="navItem" data-section="projects">
+            Projects
+          </div>
+        </a>
+
+        <a class="navItemWrapper" style="text-decoration: none;" href="#resume">
+          <div class="navItem" data-section="resume">
+            Resume
+          </div>
+        </a>
+
+        <a class="navItemWrapper" href="http://github.com/paulpooch" style="text-decoration: none;">
+          <div class="navItem">
+            GitHub
+          </div>
+        </a>
+
+        <a class="navItemWrapper" href="http://linkedin.com/in/paulpooch" style="text-decoration: none;">
+          <div class="navItem">
+            LinkedIn
+          </div>
+        </a>
+
+      </div>
+
+      <!-- RIGHT SIDE OF LEFT COL -->
+      <div class="hidesMobile" style="
+      width: 200px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(-50%) rotateY(90deg) translateX(50%);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
+
+      <!-- LEFT SIDE OF CONTENT AREA -->
+      <div class="appearsMobile" style="
+      margin-top: 50px;
+      margin-left: -160px;
+      width: 160px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-120px) rotateY(90deg) translateZ(80px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
+
+      <!-- CONTENT AREA -->
+      <div class="flex7 flextainer flexcol shiftsMobile" style="
+      transform: translateZ(-40px);
+      z-index: 2;
+      ">
+        <div style="height: 50px;">
+          <!-- don't collapse -->
+          <div style="height: 50px;">&nbsp;</div>
+        </div>
+        <div id="contentArea" class="flex1" style="
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.33);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        ">
+
+          <!-- HOME -->
+          <div id="home" class="section" style="color: rgba(255, 255, 255, 1.0);">
+
+            <div class="flextainer flexcenter flexitemscenter" style="
+            margin: 20px 20px 10px;
+            ">
+              <div class="flex1 hidesMobile"></div>
+              <div class="flex13">
+
+                <h1 class="heavyWeight uppers">
+                  I'm a full stack engineer<br/>
+                  with a strength in front end.
+                </h1>
+                <p>
+                  I've built large scale web apps in many web stacks.<br/>
+                  Currently I work on both Backbone & React/Redux products.
+                </p>
+                <p>
+                  I live in NYC and work at Ticket Evolution.
+                </p>
+                <p>
+                  Currently pursuing Pied Piper for trademark infringement.
+                </p>
+
+              </div>
+              <div class="flex1 hidesMobile"></div>
+            </div>
+
+            <div class="flextainer flexcenter flexitemscenter blockMobile" style="
+            color: rgba(50, 50, 50, 1.0);
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 1.0);
+            margin: 10px 20px;
+            ">
+
+              <div class="flex1 hidesMobile"></div>
+
+              <div class="flex4" style="
+              box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+              margin: 0 0 30px 0;
+              min-width: 220px;
+              ">
+                <div class="flextainer flexitemscenter" style="
+                background: rgba(255, 255, 255, 0.9);
+                margin: 0;
+                padding: 10px 30px 10px 15px;
+                ">
+                  <img src="design.svg" style="width: 4rem;" />
+                  <h2 class="heavyWeight uppers nowrap" style="margin: 0 0 0 5px; padding-top: 5px;">UI</h2>
+                </div>
+                <h3 style="background: rgba(255, 255, 255, 0.8); padding: 8px 20px;">HTML5</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.7); padding: 8px 20px;">CSS3 (LESS, SASS)</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.6); padding: 8px 20px;">Responsive Design</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.5); padding: 8px 20px;">UX Theory</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.4); padding: 8px 20px;">Photoshop, Sketch, etc.</h3>
+              </div>
+
+              <div class="flex5" style="
+              z-index: 3;
+              box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+              margin: 0 0 30px 0;
+              min-width: 250px;
+              ">
+                <div class="flextainer flexitemscenter" style="
+                background: rgba(255, 255, 255, 0.9);
+                margin: 0;
+                padding: 10px 30px 10px 15px;
+                ">
+                  <img src="front.svg" style="width: 4rem;" />
+                  <h2 class="heavyWeight uppers nowrap" style="margin: 0 0 0 10px;">Front End</h2>
+                </div>
+                <h3 style="background: rgba(255, 255, 255, 0.8); padding: 15px 20px;">JavaScript (ES6)</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.7); padding: 15px 20px;">React / Redux</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.6); padding: 15px 20px;">Backbone</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.5); padding: 15px 20px;">App Security</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.4); padding: 15px 20px;">WebSockets, WebWorkers, d3, etc.</h3>
+              </div>
+
+              <div class="flex4" style="
+              box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+              margin: 0 0 30px 0;
+              min-width: 220px;
+              ">
+                <div class="flextainer flexitemscenter" style="
+                background: rgba(255, 255, 255, 0.9);
+                padding: 10px 30px 10px 15px;
+                ">
+                  <img src="server.svg" style="width: 4rem;" />
+                  <h2 class="heavyWeight uppers nowrap" style="margin: 0 0 0 5px; padding-top: 5px;">Back End</h2>
+                </div>
+                <h3 style="background: rgba(255, 255, 255, 0.8); padding: 8px 20px;">Node (Koa, Express)</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.7); padding: 8px 20px;">Ruby on Rails</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.6); padding: 8px 20px;">SQL</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.5); padding: 8px 20px;">MongoDB</h3>
+                <h3 style="background: rgba(255, 255, 255, 0.4); padding: 8px 20px;">Unix, AWS, Caching, etc.</h3>
+              </div>
+
+              <div class="flex1 hidesMobile"></div>
+
+            </div>
+
+          </div>
+          <!-- END HOME -->
+
+          <!-- PROJECTS -->
+          <div id="projects" class="section" style="
+          display: none;
+          color: rgba(255, 255, 255, 1.0);
+          ">
+            <div class="flextainer">
+
+              <div class="flex1 hidesMobile"></div>
+
+              <div class="flex10" style="
+              margin: 20px;
+              ">
+
+                <h1 class="heavyWeight uppers">Ticket Evolution Store</h1>
+                <h2 class="mediumWeight" style="margin-top: 10px;">Highlights</h2>
+                <p>
+                  A retail ticket store that can repurposed for multiple partners.
+                </p>
+                <p>
+                  Utilizes my <a href="https://github.com/ticketevolution/ticketevolution-node" class="noShadow">ticketevolution-node</a>
+                  API client to forward requests with the store owners API credentials.
+                </p>
+                <p>
+                  Mobile responsive, lightweight, clean design.
+                </p>
+                <p>
+                  <a href="https://store.ticketevolution.com" class="noShadow">
+                    Visit the sandbox instance.
+                  </a>
+                </p>
+
+                <h1 class="heavyWeight uppers" style="margin-top: 50px;">Ticket Evolution CORE Point of Sale</h1>
+                <h2 class="mediumWeight" style="margin-top: 10px;">Highlights</h2>
+                <div class="highlight">
+                  <img src="./screenshots/seating_chart.png" />
+                  <div>
+                    <div>
+                      <h3>
+                        Interactive seating charts that can be used to filter tickets, provide pricing guidance, and
+                        give sample views from every section.
+                      </h3>
+                      Made in <a href="https://d3js.org/" class="noShadow">d3</a> and vanilla js.<br/>
+                      <br/>
+                      Available to select partners as a lightweight npm package.
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight alt">
+                  <img src="./screenshots/barcode_reader.png" />
+                  <div>
+                    <div>
+                      <h3>
+                        Analyzes etickets and automatically detects and enters barcodes on the user's behalf.
+                      </h3>
+                      Made with webworkers (does not block UI thread) & canvas.<br/>
+                      <br/>
+                      Supports TicketMaster ("interleaved 2 of 5") barcodes.
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight">
+                  <img src="./screenshots/mass_edit.png" />
+                  <div>
+                    <div>
+                      <h3>
+                        Power tools like mass editing ticket inventory & inline pricing comparison and adjusting.
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight alt">
+                  <img src="./screenshots/acl.png" />
+                  <div>
+                    <div>
+                      <h3>
+                        An Access Control List (ACL) system allows all features to be enabled/disabled
+                        based on the user's role and optional feature flags.
+                      </h3>
+                      Resources are in a tree structure so entire feature sets can be white or blacklisted with one command.<br/>
+                      <br/>
+                      Roles can inherit from each other.<br/>
+                      <br/>
+                      Inspired by the Zend Framework ACL.
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight">
+                  <img src="./screenshots/version_manager.png" />
+                  <div>
+                    <div>
+                      <h3>
+                        Version manager prompts users when their application code is outdated.
+                      </h3>
+                      Based on hash (fingerprint) of webpack build.<br/>
+                      <br/>
+                      Helps reduce support calls & prevents outdated code from being cached by browser.
+                    </div>
+                  </div>
+                </div>
+                <div class="highlight alt">
+                  <img src="./screenshots/filters.png" />
+                  <div>
+                    <div style="min-width: 200px;">
+                      <h3>
+                        Sortable, filterable, exportable, url persistent datatables.
+                      </h3>
+                      Both paginated and "infinite scroll" variations where appropriate.<br/>
+                      <br/>
+                      Export to CSV and printer friendly formats.<br/>
+                      <br/>
+                      High performance <a href="http://nytimes.github.io/pourover/">PourOver</a> based filtering.<br/>
+                      <br/>
+                      Extensive use of jQuery <a href="https://datatables.net/">DataTables</a>.
+                    </div>
+                  </div>
+                </div>
+
+                <h1 class="heavyWeight uppers" style="margin-top: 50px;">Juicytracks</h1>
+                <h2 class="mediumWeight" style="margin-top: 10px; margin-bottom: 20px;">Highlights</h2>
+                <img class="scalingImg" src="./screenshots/jt2.png" />
+                <p>
+                  A SoundCloud powered music sharing site.
+                </p>
+                <p>
+                  Tracked song listens on a granular level (to the second) using websockets.
+                </p>
+                <p>
+                  Hoped to derive rankings from the the average listen percentage of a song and the reputation of the user that shared it.
+                </p>
+                <img class="scalingImg" src="./screenshots/jt1.png" />
+
+                <h1 class="heavyWeight uppers" style="margin: 50px 0 50px;">Shoutbreak</h1>
+                <div class="flextainer flexend">
+                  <img src="./screenshots/shoutbreak_logo.png" class="scalingImg" style="
+                  -webkit-filter: drop-shadow(rgba(255, 255, 255, 1.0) 0 1px 3px);
+                  " />
+                </div>
+                <div class="highlight alt" style="margin-top: 0;">
+                  <div>
+                    <div style="min-width: 200px;">
+                      <h3>
+                        An anonymous local messaging app for Android 2.x. (Similar to YikYak)
+                      </h3>
+                      <p>Determined the nearest N users and delivered your 'shouts' to them.</p>
+                      <p>Leveling up through upvotes would increase the reach of your shouts to more users.</p>
+                      <p>I built the entire app and serverside API, along with all the art assets.</p>
+                      <p>The domains (including .com) and branding package are for sale : )</p>
+                    </div>
+                  </div>
+                  <div style="display: block;">
+                    <div id="sbSlideshow" style="margin: 30px 0 10px;">
+                    </div>
+                    <div class="flex1 flextainer">
+                      <button class="flex1 uppers heavyWeight" id="sbPrev" style="color: #222; max-width: 240px; line-height: 2.0em; font-size: 1.5em; border: 1px solid #222;">PREV</button>
+                      <button class="flex1 uppers heavyWeight" id="sbNext" style="color: #222; max-width: 240px; line-height: 2.0em; font-size: 1.5em; border: 1px solid #222;">NEXT</button>
+                    </div>
+                  </div>
+                </div>
+                <script>
+                (function() {
+
+                  var imgCount = 4;
+                  var url = './screenshots/shoutbreak';
+                  var $container = document.getElementById('sbSlideshow');
+                  var $prev = document.getElementById('sbPrev');
+                  var $next = document.getElementById('sbNext');
+                  var els = [];
+                  for (var i = 0; i < imgCount; i++) {
+                    var img = new Image();
+                    img.src = url + (i + 1) + '.png'; // Achieve preload.
+                    var el = document.createElement('img');
+                    el.style.border = '1px solid #222';
+                    el.src = img.src;
+                    els.push(el);
+                  }
+                  var setImg = function(idx) {
+                    $container.innerHTML = '';
+                    $container.appendChild(els[idx]);
+                  };
+                  $prev.addEventListener('click', function(e) {
+                    index--;
+                    index = (index < 0) ? els.length - 1 : index;
+                    setImg(index);
+                  });
+                  $next.addEventListener('click', function(e) {
+                    index++;
+                    index = index % els.length;
+                    setImg(index);
+                  });
+                  var index = 0;
+                  setImg(index);
+                }());
+                </script>
+
+              </div>
+
+              <div class="flex1 hidesMobile"></div>
+
+            </div>
+          </div>
+          <!-- END PROJECTS -->
+
+          <!-- RESUME -->
+          <div id="resume" class="section" style="
+          display: none;
+          color: rgba(255, 255, 255, 1.0);
+          ">
+
+            <div class="flextainer">
+
+              <div class="flex1 hidesMobile"></div>
+
+              <div class="flex10" style="
+              margin: 20px;
+              ">
+
+                <div class="flextainer flexend">
+                  <div>
+                    PDF version available by request.
+                  </div>
+                </div>
+
+                <h1 style="margin-top: 50px;">
+                  Education
+                </h1>
+                <h3 style="margin-top: 10px;">
+                  University of North Carolina at Chapel Hill
+                </h3>
+                <p>
+                  B.S. with Highest Honors, Computer Science<br/>
+                  December 2007<br/>
+                  3.73 Major GPA, 3.63 Overall GPA
+                </p>
+
+                <h1 style="margin-top: 50px;">
+                  Technical Skills
+                </h1>
+
+                <p>
+                  Currently working in JavaScript.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">ES6 (JavaScript 2015)</span>
+                  <span class="tag">Node</span>
+                  <span class="tag">React</span>
+                  <span class="tag">Redux</span>
+                  <span class="tag">Backbone</span>
+                  <span class="tag">Koa</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">CoffeeScript</span>
+                  <span class="tag">Express</span>
+                  <span class="tag">LESS</span>
+                  <span class="tag">SASS</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">WebSockets</span>
+                  <span class="tag">WebWorkers</span>
+                  <span class="tag">App Security (OWASP)</span>
+                  <span class="tag">Webpack</span>
+                  <span class="tag">Gulp</span>
+                  <span class="tag">Promises</span>
+                  <span class="tag">Generators</span>
+                  <span class="tag">Async</span>
+                  <span class="tag">d3</span>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  And a Ruby on Rails powered API.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">Ruby</span>
+                  <span class="tag">Rails</span>
+                  <span class="tag">PostgreSQL</span>
+                  <span class="tag">nginx</span>
+                  <span class="tag">Memcached</span>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  Past experience in many web stacks.
+                </p>
+
+                <p>
+                  <table>
+                    <tr>
+                      <td>
+                        LAMP
+                      </td>
+                      <td style="padding-left: 10px;">
+                        <span class="tag">PHP</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Zend Framework</span>
+                        <span class="tag">Apache</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 20px;">
+                        Java
+                      </td>
+                      <td style="padding-top: 20px; padding-left: 10px;">
+                        <span class="tag">JSP</span>
+                        <span class="tag">Struts</span>
+                        <span class="tag">Servlets</span>
+                        <span class="tag">Oracle</span>
+                        <span class="tag">WebSphere</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding-top: 20px;">
+                        .NET
+                      </td>
+                      <td style="padding-top: 20px; padding-left: 10px;">
+                        <span class="tag">ASP.NET Web Forms</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">.NET</span>
+                        <span class="tag">SQL</span>
+                        <span class="tag">IIS</span><br/>
+                        <span class="tag">WPF</span>
+                        <span class="tag">XAML</span>
+                        <span class="tag">Silverlight</span>
+                        <span class="tag">MVVM</span>
+                      </td>
+                    </tr>
+                  </table>
+                </p>
+
+                <p style="margin-top: 40px;">
+                  Design skills including:
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">LESS</span>
+                  <span class="tag">SASS</span>
+                  <span class="tag">PhotoShop</span>
+                  <span class="tag">Sketch</span>
+                  <span class="tag">Responsive Design</span>
+                  <span class="tag">UX Theory</span>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  Experience building complex Android 2.x applications.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">Android</span>
+                  <span class="tag">Services</span>
+                  <span class="tag">Maps</span>
+                  <span class="tag">Threads</span>
+                  <span class="tag">Gestures</span>
+                  <span class="tag">C2DM</span>
+                </div>
+
+                <p style="margin-top: 40px;">
+                  And some other miscellaneous skills.
+                </p>
+                <div style="max-width: 400px;">
+                  <span class="tag">Machine Learning</span>
+                  <span class="tag">Graph Analytics</span>
+                  <span class="tag">Unix</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">GIS</span>
+                  <span class="tag">Hardware (building PCs)</span>
+                  <span class="tag">Networking</span>
+                  <span class="tag">EC2</span>
+                  <span class="tag">Elasticache</span>
+                  <span class="tag">DynamoDB</span>
+                  <span class="tag">S3</span>
+                  <span class="tag">Git</span>
+                  <span class="tag">TFS</span>
+                  <span class="tag" style="white-space: nowrap;">Bank of America certified - Web Application Security</span>
+                </div>
+
+                <h1 style="margin-top: 50px;">
+                  Professional Experience
+                </h1>
+                <div class="flextainer flexbetween" style="margin-top: 40px;">
+                  <h2>Ticket Evolution</h2>
+                  <h3 style="font-weight: 100;">February 2013 - Present</h3>
+                </div>
+                <h3>Lead Front End Engineer</h3>
+                <ul class="resumeList" style="font-size: 1.2rem;">
+                  <li>
+                    Responsible for front end architecture & tooling.
+                  </li>
+                  <li>
+                    Tech Lead for flagship web application - CORE Point of Sale system.<br/>
+                    Application allows Ticket Brokers to perform all job functions.
+                    <ul>
+                      <li>
+                        <a href="http://ticketevolution.com/products/point-of-sale" target="_blank" class="noShadow">Overview</a> |
+                        <a href="http://ticketevolution.com/support/video-guides" target="_blank" class="noShadow">Feature Videos</a>
+                      </li>
+                      <li>
+                        Inherited a half Rails, half Backbone codebase with multiple prior owners and 20% feature completion.
+                      </li>
+                      <li>
+                        Assumed ownership & converted to a feature complete, true Single Page App.
+                      </li>
+                      <li>
+                        Built complex UI components like barcode readers, interactive seating charts, access control
+                        permissioning, endless tables, large dataset filtering, and pdf uploaders.
+                      </li>
+                      <li>
+                        Continue to manage team, delegate work items, perform code reviews, build new features, etc.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Tech Lead for consumer facing ticket store.
+                    <ul>
+                      <li>
+                        <a href="http://store.ticketevolution.com" target="_blank" class="noShadow">Friends & Family instance of store.</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <div class="flextainer flexbetween" style="margin-top: 40px;">
+                  <h2>Merrill Lynch</h2>
+                  <h3 style="font-weight: 100;">
+                    July 2008 - February 2013
+                  </h3>
+                </div>
+                <h3>Associate Vice President</h3>
+
+                <ul class="resumeList">
+                  <li>
+                    Technical Lead for a developer team of 5 building a corporate reporting application that collected
+                    financial results from hundreds of users.
+                    <ul>
+                      <li>
+                        Built in Java EE, JSP, Aspose.Cells, JavaScript/jQuery, HTML/CSS, WebSphere and Oracle.
+                      </li>
+                      <li>
+                        Only Middle Office application of 30+ to remain in green (on-schedule) status throughout its
+                        lifetime.
+                      </li>
+                      <li>
+                        Overcame time-zone and language barriers to effectively utilize offshore resources.
+                      </li>
+                      <li>
+                        Solved technical hurdles, distributed deliverables, owned source control,
+                        wrote performance sensitive JavaScript controls and Java servlets, recruited developers,
+                        integrated thousands of lines of code and all UI screens, requisitioned and managed 4 server
+                        environments, implemented all Bank audit and data recovery standards.
+                      </li>
+                      <li>
+                        End product currently used by the bank to file Form 10-K and 10-Q SEC reports.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Lead developer for a JavaScript report framework to wrap reports with a cohesive menu and toolbar
+                    system.
+                  </li>
+                  <li>
+                    Lead on Silverlight dashboard for realtime profit and loss analysis.
+                    <ul>
+                      <li>
+                        Researched and prototyped a Silverlight framework for building modular financial dashboards
+                        with real-time data streaming and on-demand component loading.
+                      </li>
+                      <li>
+                        Presented framework at Bank of America DevCon as the youngest presenter to date.
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    Prototyped a profit and loss application within the bank's Python based framework.
+                  </li>
+                </ul>
+
+                <div class="flextainer flexbetween" style="margin-top: 40px;">
+                  <h2>Merrill Lynch</h2>
+                  <h3 style="font-weight: 100;">
+                   Summer 2007
+                  </h3>
+                </div>
+                <h3>Technology Analyst</h3>
+
+                <div class="flextainer flexbetween" style="margin-top: 40px;">
+                  <h2>JPMorgan Chase</h2>
+                  <h3 style="font-weight: 100;">
+                    Summer 2006
+                  </h3>
+                </div>
+                <h3>Technology Intern</h3>
+
+              </div>
+              <div class="flex1"></div>
+            </div>
+
+          </div>
+          <!-- END RESUME -->
+
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE OF CONTENT AREA -->
+      <div style="
+      margin-top: 50px;
+      margin-left: -160px;
+      width: 160px;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateZ(-120px) rotateY(90deg) translateZ(80px);
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      border-left: none;
+      "></div>
+
+    </div>
+
+    <!-- RIGHT GUTTER -->
+    <div class="flex1"></div>
+
+  </div>
+
+  <!-- BOTTOM BUFFER -->
+  <div style="height: 50px;"></div>
+
 </div>
+
+
+
+
+
+
+
+
+
+<div class="flextainer flextainer flexcol" style="z-index: -1; height: 100vh; position: absolute; top: 0; bottom: 0; left: 0; right: 0;">
+  <!-- TOP BUFFER -->
+  <div style="height: 50px;"></div>
+  <div class="flex1 flextainer flexcenter flexitemsend" style="">
+    <!-- LEFT GUTTER -->
+    <div class="flex1"></div>
+    <div class="flex30 flextainer" style="
+    height: calc(100vh - 100px);
+    ">
+      <!-- LEFT SIDE OF LEFT COL -->
+      <div class="hidesMobile shiftsMobile" style="
+      width: 200px;
+      "></div>
+      <!-- TOP OF LEFT COL -->
+      <div id="left" class="hidesMobile flex2 flextainer flexcol" style="
+      height: 200px;
+      border: 1px solid rgba(0, 0, 0, 0.33);
+      background: rgba(255, 255, 255, 0.05);
+      transform: translateY(-50%) rotateX(90deg) translateY(-50%);
+      ">
+      </div>
+      <!-- RIGHT SIDE OF LEFT COL -->
+      <div class="hidesMobile" style="
+      width: 200px;
+      "></div>
+      <!-- CONTENT AREA -->
+      <div class="shiftsMobile flex7 flextainer flexcol">
+        <div style="height: 50px;"></div>
+        <!-- TOP OF CONTENT AREA -->
+        <div style="
+        height: 160px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(0, 0, 0, 0.33);
+        transform: translateZ(-120px) translateY(-50%) rotateX(90deg);
+        ">
+        </div>
+      </div>
+      <!-- RIGHT SIDE OF CONTENT AREA -->
+      <div style="
+      margin-top: 50px;
+      margin-left: -160px;
+      width: 160px;
+      "></div>
+    </div>
+    <!-- RIGHT GUTTER -->
+    <div class="flex1"></div>
+  </div>
+  <!-- BOTTOM BUFFER -->
+  <div style="height: 50px;"></div>
+</div>
+
+<script>
+
+  (function() {
+    var BASE_PERSPECTIVE = 1000;
+    var LISTENER_RATE_LIMIT = 10;
+    var MOVE_MUTE_FACTOR = 0.9;
+    var ZOOM_MUTE_FACTOR = 3;
+
+    var viewportHeight = null;
+    var viewportWidth = null;
+
+    const MOBILE_BREAKPOINT = 1000;
+    const isMobile = ((window.innerWidth > 0) ? window.innerWidth : screen.width) < MOBILE_BREAKPOINT;
+
+    function toggleSection(section) {
+      [].slice.call(document.getElementsByClassName('section')).forEach(function(el) {
+        el.style.display = 'none';
+      });
+      document.getElementById(section).style.display = 'block';
+      var parts = window.document.location.href.split('#');
+      window.history.replaceState({}, 'Paul Pucciarelli - Full Stack Engineer', parts[0] + '#' + section);
+    }
+
+    function resize(event) {
+      viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    }
+
+    function alignToMouse(event) {
+      if (!isMobile) {
+        var inversePercentX = 100 * (1 - event.clientX / viewportWidth);
+        var inversePercentY = 100 * (1 - event.clientY / viewportHeight);
+        var distPercentX = 50 - inversePercentX;
+        var distPercentY = 50 - inversePercentY;
+        var distPercent = Math.sqrt(distPercentX * distPercentX + distPercentY * distPercentY);
+        var perspective =  Math.max(BASE_PERSPECTIVE - (ZOOM_MUTE_FACTOR * distPercent), 100);
+
+        document.body.style.webkitPerspective = ~~perspective + 'px';
+        document.body.style.webkitPerspectiveOrigin = ~~inversePercentX + '% ' + ~~inversePercentY + '% ';
+        document.body.style.marginLeft = ~~(MOVE_MUTE_FACTOR * distPercentX) + 'px';
+        document.body.style.marginTop = ~~(MOVE_MUTE_FACTOR * distPercentY) + 'px';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", resize);
+    document.addEventListener("DOMContentLoaded", function() {
+      var parts = window.document.location.href.split('#');
+      parts.length > 1 && parts[1] && toggleSection(parts[1]);
+    });
+
+    function onNavClick(e) {
+      if (e.target.classList.contains('navItem')) {
+        var section = e.target.getAttribute('data-section');
+        if (section) {
+          toggleSection(section);
+          e.preventDefault();
+          e.stopPropagation();
+        }
+      }
+    }
+
+    document.getElementById('left').addEventListener('click', onNavClick);
+    document.getElementById('topNav').addEventListener('click', onNavClick);
+
+    window.addEventListener('mousemove', _.throttle(alignToMouse, LISTENER_RATE_LIMIT));
+
+  }());
+
+</script>
 </body>
 </html>
