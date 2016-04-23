@@ -968,8 +968,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
     var viewportHeight = null;
     var viewportWidth = null;
 
-    const MOBILE_BREAKPOINT = 1000;
-    const isMobile = ((window.innerWidth > 0) ? window.innerWidth : screen.width) < MOBILE_BREAKPOINT;
+    const hasMouse = !(navigator.userAgent.match(/android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i));
 
     function toggleSection(section) {
       [].slice.call(document.getElementsByClassName('section')).forEach(function(el) {
@@ -986,7 +985,7 @@ background: linear-gradient(to left, #7b4397 , #dc2430); /* W3C, IE 10+/ Edge, F
     }
 
     function alignToMouse(event) {
-      if (!isMobile) {
+      if (hasMouse) {
         var inversePercentX = 100 * (1 - event.clientX / viewportWidth);
         var inversePercentY = 100 * (1 - event.clientY / viewportHeight);
         var distPercentX = 50 - inversePercentX;
