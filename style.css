@@ -131,6 +131,14 @@ a:hover, a:active {
   -webkit-flex-wrap: wrap;
   margin-top: 50px;
 }
+img.site {
+  width: 100%;
+  height auto;
+  cursor: pointer;
+}
+.siteHolder {
+  border: 1px solid #222;
+}
 .highlight img {
   flex: 1;
   -webkit-flex: 1;
