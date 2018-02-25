@@ -147,6 +147,7 @@ img.site {
   margin: 20px 0;
 }
 .highlight > div.desc {
+  min-width: 300px;
   flex: 1;
   -webkit-flex: 1;
   display: -webkit-box;
@@ -155,9 +156,11 @@ img.site {
   display: -webkit-flex;
   display: flex;
 }
-.highlight > div.desc > div {
+.highlight > div.desc {
   flex: 10;
   -webkit-flex: 10;
+  text-align: left;
+  order: 2;
 }
 .highlight > div.desc::before {
   content: '';
@@ -173,6 +176,8 @@ img.site {
   order: 2;
 }
 .highlight.alt > div.desc {
+  flex: 10;
+  -webkit-flex: 10;
   text-align: right;
   order: 1;
 }
@@ -406,15 +411,18 @@ Think of it as the justify-content version for the cross-axis (perpendicular to 
   .hidesMobile {
     display: none !important;
   }
-  .highlight img {
+  .highlight.alt div.desc {
+    text-align: left !important;
+  }
+  .highlight div.pic img {
     height: auto;
     width: auto;
     max-width: 300px;
   }
-  .highlight > div::before {
+  .highlight > div.desc::before {
     content: none !important;
   }
-  .highlight.alt > div::after {
+  .highlight.alt > div.desc::after {
     content: none !important;
   }
   .scalingImg {
