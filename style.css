@@ -139,15 +139,14 @@ img.site {
 .siteHolder {
   border: 1px solid #222;
 }
+
 .highlight img {
-  flex: 1;
-  -webkit-flex: 1;
   border: 1px solid #222;
 }
 .highlight h3 {
   margin: 20px 0;
 }
-.highlight > div {
+.highlight > div.desc {
   flex: 1;
   -webkit-flex: 1;
   display: -webkit-box;
@@ -156,12 +155,11 @@ img.site {
   display: -webkit-flex;
   display: flex;
 }
-.highlight > div > div {
+.highlight > div.desc > div {
   flex: 10;
   -webkit-flex: 10;
 }
-
-.highlight > div::before {
+.highlight > div.desc::before {
   content: '';
   flex: 1;
   -webkit-flex: 1;
@@ -171,20 +169,22 @@ img.site {
   flex-wrap: wrap-reverse;
   -webkit-flex-wrap: wrap-reverse;
 }
-.highlight.alt img {
+.highlight.alt > div.pic {
   order: 2;
 }
-.highlight.alt > div {
+.highlight.alt > div.desc {
+  text-align: right;
   order: 1;
 }
-.highlight.alt > div::before {
+.highlight.alt > div.desc::before {
   content: none;
 }
-.highlight.alt > div::after {
+.highlight.alt > div.desc::after {
   content: '';
   flex: 1;
   -webkit-flex: 1;
 }
+
 .noShadow {
   text-shadow: none;
 }
