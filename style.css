@@ -180,8 +180,13 @@ img.site {
 
 @media (min-width: 1200px) {
   .highlight.alt .desc {
+    justify-content: flex-end;
     text-align: right;
   }
+}
+
+#sbSlideshow img {
+  max-width: 100%;
 }
 
 .noShadow {
